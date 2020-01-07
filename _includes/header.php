@@ -14,10 +14,8 @@
 <link rel="stylesheet" type="text/css" href="_stylesheets/default.css?<?php echo date('h:i:s');?>">
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css">
 
-<script type="text/javascript" 
-	src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script type="text/javascript" 
-	src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 <!-- Javascript Disabled -->
 
