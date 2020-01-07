@@ -2,6 +2,7 @@
 session_start();
 require_once('includes/functions.php');
 require_once('includes/racialAbilities.php');
+require_once('includes/deathknightAbilities.php');
 $currentClass = (isset($_POST['selectedClass'])) ? $_POST['selectedClass'] : $_SESSION['class'];
 require_once('includes/'. strtolower($currentClass) .'Abilities.php');
 classNotSet(); // If SESSION['class'] is unset, redirect to class selection
