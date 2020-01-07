@@ -205,7 +205,6 @@ div#banner2 {
 -----------------------------------*/
 
 div#middle_bg {
-	/*height: 100%;*/
 	width: 100%;
 	margin: 0 auto;
 }
@@ -217,7 +216,7 @@ div#middle {
 	border-radius: 10px 10px 0 0;
 	-webkit-border-radius: 10px 10px 0 0;
 	background-color: #040404;
-	height: 100%; min-height: 680px;
+	min-height: 680px;
 	width: 940px; min-width: 940px;
 	margin: 0 auto;
 	padding: 0px;
@@ -1118,7 +1117,6 @@ div.mouseKey {
 -----------------------------------*/
 
 div#bottom_bg {
-	height: 150px;
 	width: 100%;
 	margin-bottom: 15px;
 }
@@ -1129,17 +1127,15 @@ div#bottom {
 	border-radius: 0 0 10px 10px;
 	-webkit-border-radius: 0 0 10px 10px;
 	background: #040404;
-	height: 100%;
 	width: 940px; min-width: 940px;
 	margin: 0 auto;
+	padding-top: 20px;
 	position: relative;
 	padding: 0px;
 }
 
 #copyStatement {
-	position: absolute;
-	bottom: 5px;
-	left: 280px;
+	text-align: center;
 	font-size: 12px;
 	color: #4a6b74;
 }
