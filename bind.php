@@ -1,6 +1,6 @@
 <?php
 require_once('_includes/session.php');
-require_once('_includes/connection.php');
+// require_once('_includes/connection.php');
 require_once('_includes/functions.php');
 require_once('_includes/racialAbilities.php');
 $currentClass = (isset($_POST['selectedClass'])) ? $_POST['selectedClass'] : $_SESSION['class'];

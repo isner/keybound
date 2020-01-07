@@ -1,6 +1,6 @@
 <?php
 require_once('_includes/session.php');
-require_once('_includes/connection.php');
+// require_once('_includes/connection.php');
 require_once('_includes/functions.php');
 require_once('_includes/classTalents.php');
 // gatekeeper(); // If SESSION['userId'] is unset, redirect to login
