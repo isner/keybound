@@ -1,11 +1,9 @@
 <?php
-require_once('_includes/session.php');
-// require_once('_includes/connection.php');
-require_once('_includes/functions.php');
-require_once('_includes/racialAbilities.php');
+session_start();
+require_once('includes/functions.php');
+require_once('includes/racialAbilities.php');
 $currentClass = (isset($_POST['selectedClass'])) ? $_POST['selectedClass'] : $_SESSION['class'];
-require_once('_includes/'. strtolower($currentClass) .'Abilities.php');
-// gatekeeper(); // If SESSION['userId'] is unset, redirect to login
+require_once('includes/'. strtolower($currentClass) .'Abilities.php');
 classNotSet(); // If SESSION['class'] is unset, redirect to class selection
 ?>
 
@@ -174,7 +172,7 @@ $classesWithBuffs = array('Druid','Mage','Monk','Paladin','Priest','Rogue','Warl
 //=================================================
 //               BEGIN CLIENT SIDE
 //=================================================
-require('_includes/header.php');
+require('includes/header.php');
 ?>
 
 <!--
@@ -220,11 +218,11 @@ $_SESSION['tutorials'] = 'no';
 						
 							<?php if ($value['displaySubtext'] == 'Racial') { // This ability is a racial ?>
 						
-								<img src="_images/_races/<?php echo $key; ?>.jpg">
+								<img src="images/_races/<?php echo $key; ?>.jpg">
 						
 							<?php } else { // This ability is a class ability or talent ?>
 						
-								<img src="_images/_<?php echo strtolower($_SESSION['class']). '/' . $key; ?>.jpg">
+								<img src="images/_<?php echo strtolower($_SESSION['class']). '/' . $key; ?>.jpg">
 								
 							<?php } ?>
 							
@@ -295,7 +293,7 @@ $_SESSION['tutorials'] = 'no';
 	
 	<div id="sb_prevPage" class="sb_navButton">
 	
-		<img src="_images/sb_arrow_left.png">
+		<img src="images/sb_arrow_left.png">
 		
 	</div>
 	
@@ -307,13 +305,13 @@ $_SESSION['tutorials'] = 'no';
 	
 	<div id="sb_nextPage" class="sb_navButton">
 	
-		<img src="_images/sb_arrow_right.png">
+		<img src="images/sb_arrow_right.png">
 		
 	</div>
 	
 	<!-- Instructions Link -->
 	
-	<div id="instructions-link">Instructions<img id="question_mark" src="_images/question_mark.png"></div>
+	<div id="instructions-link">Instructions<img id="question_mark" src="images/question_mark.png"></div>
 	
 	<!-- Current Class/Spec -->	
 	<div id="sb_currentSpec" style="color: #<?php echo $classColors[$_SESSION['class']]; ?>">
@@ -855,7 +853,7 @@ $_SESSION['tutorials'] = 'no';
 	
 		<span class="grey" style="position: absolute; bottom: 10px; left: 230px; color: #373737; z-index: 10;">G700 &copy; Logitech</span>
 	
-		<img src="_images/mouse_g700.png" style="position: absolute; left: 100px; top: -20px; transform: scale(0.9,0.9);">
+		<img src="images/mouse_g700.png" style="position: absolute; left: 100px; top: -20px; transform: scale(0.9,0.9);">
 
 		<div id="9buttonMouse" style="position: relative;">
 		<!-- This div occupies no space in the DOM - all contents are absolutely positioned -->
@@ -1131,5 +1129,5 @@ $_SESSION['tutorials'] = 'no';
 </div>
 
 <?php
-require('_includes/footer.php');
+require('includes/footer.php');
 ?>

@@ -1,17 +1,13 @@
 <?php
-require_once('_includes/session.php');
-// require_once('_includes/connection.php');
-require_once('_includes/functions.php');
-require_once('_includes/classTalents.php');
-// gatekeeper(); // If SESSION['userId'] is unset, redirect to login
-
-
+session_start();
+require_once('includes/functions.php');
+require_once('includes/classTalents.php');
 
 //=================================================
 //               BEGIN CLIENT SIDE
 //=================================================
 
-require('_includes/header.php');
+require('includes/header.php');
 ?>
 
 <!--
@@ -40,7 +36,7 @@ require('_includes/header.php');
 
 	<?php foreach ($classes as $key => $value) { ?>
 	
-	<div class="classIcon"><img src="_images/_classes/<?php echo $value['filename']; ?>.jpg">
+	<div class="classIcon"><img src="images/_classes/<?php echo $value['filename']; ?>.jpg">
 	
 		<div class="hide"><?php echo $key; ?></div>
 		
@@ -102,17 +98,17 @@ require('_includes/header.php');
 		<div id="spec1" class="specTalent">
 		
 			<div class="talentIcon">
-				<span class="DeathKnightSelected"><img src="_images/_deathknight/<?php classValues($classes['Death Knight']['specs'], 0); ?>.jpg"></span>
-				<span class="DruidSelected"><img src="_images/_druid/<?php classValues($classes['Druid']['specs'], 0); ?>.jpg"></span>
-				<span class="HunterSelected"><img src="_images/_hunter/<?php classValues($classes['Hunter']['specs'], 0); ?>.jpg"></span>
-				<span class="MageSelected"><img src="_images/_mage/<?php classValues($classes['Mage']['specs'], 0); ?>.jpg"></span>
-				<span class="MonkSelected"><img src="_images/_monk/<?php classValues($classes['Monk']['specs'], 0); ?>.jpg"></span>
-				<span class="PaladinSelected"><img src="_images/_paladin/<?php classValues($classes['Paladin']['specs'], 0); ?>.jpg"></span>
-				<span class="PriestSelected"><img src="_images/_priest/<?php classValues($classes['Priest']['specs'], 0); ?>.jpg"></span>
-				<span class="RogueSelected"><img src="_images/_rogue/<?php classValues($classes['Rogue']['specs'], 0); ?>.jpg"></span>
-				<span class="ShamanSelected"><img src="_images/_shaman/<?php classValues($classes['Shaman']['specs'], 0); ?>.jpg"></span>
-				<span class="WarlockSelected"><img src="_images/_warlock/<?php classValues($classes['Warlock']['specs'], 0); ?>.jpg"></span>
-				<span class="WarriorSelected"><img src="_images/_warrior/<?php classValues($classes['Warrior']['specs'], 0); ?>.jpg"></span>
+				<span class="DeathKnightSelected"><img src="images/_deathknight/<?php classValues($classes['Death Knight']['specs'], 0); ?>.jpg"></span>
+				<span class="DruidSelected"><img src="images/_druid/<?php classValues($classes['Druid']['specs'], 0); ?>.jpg"></span>
+				<span class="HunterSelected"><img src="images/_hunter/<?php classValues($classes['Hunter']['specs'], 0); ?>.jpg"></span>
+				<span class="MageSelected"><img src="images/_mage/<?php classValues($classes['Mage']['specs'], 0); ?>.jpg"></span>
+				<span class="MonkSelected"><img src="images/_monk/<?php classValues($classes['Monk']['specs'], 0); ?>.jpg"></span>
+				<span class="PaladinSelected"><img src="images/_paladin/<?php classValues($classes['Paladin']['specs'], 0); ?>.jpg"></span>
+				<span class="PriestSelected"><img src="images/_priest/<?php classValues($classes['Priest']['specs'], 0); ?>.jpg"></span>
+				<span class="RogueSelected"><img src="images/_rogue/<?php classValues($classes['Rogue']['specs'], 0); ?>.jpg"></span>
+				<span class="ShamanSelected"><img src="images/_shaman/<?php classValues($classes['Shaman']['specs'], 0); ?>.jpg"></span>
+				<span class="WarlockSelected"><img src="images/_warlock/<?php classValues($classes['Warlock']['specs'], 0); ?>.jpg"></span>
+				<span class="WarriorSelected"><img src="images/_warrior/<?php classValues($classes['Warrior']['specs'], 0); ?>.jpg"></span>
 			</div>
 			
 			<div class="talentText">
@@ -136,17 +132,17 @@ require('_includes/header.php');
 		<div id="spec2" class="specTalent">
 		
 			<div class="talentIcon">
-				<span class="DeathKnightSelected"><img src="_images/_deathknight/<?php classValues($classes['Death Knight']['specs'], 1); ?>.jpg"></span>
-				<span class="DruidSelected"><img src="_images/_druid/<?php classValues($classes['Druid']['specs'], 1); ?>.jpg"></span>
-				<span class="HunterSelected"><img src="_images/_hunter/<?php classValues($classes['Hunter']['specs'], 1); ?>.jpg"></span>
-				<span class="MageSelected"><img src="_images/_mage/<?php classValues($classes['Mage']['specs'], 1); ?>.jpg"></span>
-				<span class="MonkSelected"><img src="_images/_monk/<?php classValues($classes['Monk']['specs'], 1); ?>.jpg"></span>
-				<span class="PaladinSelected"><img src="_images/_paladin/<?php classValues($classes['Paladin']['specs'], 1); ?>.jpg"></span>
-				<span class="PriestSelected"><img src="_images/_priest/<?php classValues($classes['Priest']['specs'], 1); ?>.jpg"></span>
-				<span class="RogueSelected"><img src="_images/_rogue/<?php classValues($classes['Rogue']['specs'], 1); ?>.jpg"></span>
-				<span class="ShamanSelected"><img src="_images/_shaman/<?php classValues($classes['Shaman']['specs'], 1); ?>.jpg"></span>
-				<span class="WarlockSelected"><img src="_images/_warlock/<?php classValues($classes['Warlock']['specs'], 1); ?>.jpg"></span>
-				<span class="WarriorSelected"><img src="_images/_warrior/<?php classValues($classes['Warrior']['specs'], 1); ?>.jpg"></span>
+				<span class="DeathKnightSelected"><img src="images/_deathknight/<?php classValues($classes['Death Knight']['specs'], 1); ?>.jpg"></span>
+				<span class="DruidSelected"><img src="images/_druid/<?php classValues($classes['Druid']['specs'], 1); ?>.jpg"></span>
+				<span class="HunterSelected"><img src="images/_hunter/<?php classValues($classes['Hunter']['specs'], 1); ?>.jpg"></span>
+				<span class="MageSelected"><img src="images/_mage/<?php classValues($classes['Mage']['specs'], 1); ?>.jpg"></span>
+				<span class="MonkSelected"><img src="images/_monk/<?php classValues($classes['Monk']['specs'], 1); ?>.jpg"></span>
+				<span class="PaladinSelected"><img src="images/_paladin/<?php classValues($classes['Paladin']['specs'], 1); ?>.jpg"></span>
+				<span class="PriestSelected"><img src="images/_priest/<?php classValues($classes['Priest']['specs'], 1); ?>.jpg"></span>
+				<span class="RogueSelected"><img src="images/_rogue/<?php classValues($classes['Rogue']['specs'], 1); ?>.jpg"></span>
+				<span class="ShamanSelected"><img src="images/_shaman/<?php classValues($classes['Shaman']['specs'], 1); ?>.jpg"></span>
+				<span class="WarlockSelected"><img src="images/_warlock/<?php classValues($classes['Warlock']['specs'], 1); ?>.jpg"></span>
+				<span class="WarriorSelected"><img src="images/_warrior/<?php classValues($classes['Warrior']['specs'], 1); ?>.jpg"></span>
 			</div>
 			
 			<div class="talentText">
@@ -170,17 +166,17 @@ require('_includes/header.php');
 		<div id="spec3" class="specTalent">
 		
 			<div class="talentIcon">
-				<span class="DeathKnightSelected"><img src="_images/_deathknight/<?php classValues($classes['Death Knight']['specs'], 2); ?>.jpg"></span>
-				<span class="DruidSelected"><img src="_images/_druid/<?php classValues($classes['Druid']['specs'], 2); ?>.jpg"></span>
-				<span class="HunterSelected"><img src="_images/_hunter/<?php classValues($classes['Hunter']['specs'], 2); ?>.jpg"></span>
-				<span class="MageSelected"><img src="_images/_mage/<?php classValues($classes['Mage']['specs'], 2); ?>.jpg"></span>
-				<span class="MonkSelected"><img src="_images/_monk/<?php classValues($classes['Monk']['specs'], 2); ?>.jpg"></span>
-				<span class="PaladinSelected"><img src="_images/_paladin/<?php classValues($classes['Paladin']['specs'], 2); ?>.jpg"></span>
-				<span class="PriestSelected"><img src="_images/_priest/<?php classValues($classes['Priest']['specs'], 2); ?>.jpg"></span>
-				<span class="RogueSelected"><img src="_images/_rogue/<?php classValues($classes['Rogue']['specs'], 2); ?>.jpg"></span>
-				<span class="ShamanSelected"><img src="_images/_shaman/<?php classValues($classes['Shaman']['specs'], 2); ?>.jpg"></span>
-				<span class="WarlockSelected"><img src="_images/_warlock/<?php classValues($classes['Warlock']['specs'], 2); ?>.jpg"></span>
-				<span class="WarriorSelected"><img src="_images/_warrior/<?php classValues($classes['Warrior']['specs'], 2); ?>.jpg"></span>
+				<span class="DeathKnightSelected"><img src="images/_deathknight/<?php classValues($classes['Death Knight']['specs'], 2); ?>.jpg"></span>
+				<span class="DruidSelected"><img src="images/_druid/<?php classValues($classes['Druid']['specs'], 2); ?>.jpg"></span>
+				<span class="HunterSelected"><img src="images/_hunter/<?php classValues($classes['Hunter']['specs'], 2); ?>.jpg"></span>
+				<span class="MageSelected"><img src="images/_mage/<?php classValues($classes['Mage']['specs'], 2); ?>.jpg"></span>
+				<span class="MonkSelected"><img src="images/_monk/<?php classValues($classes['Monk']['specs'], 2); ?>.jpg"></span>
+				<span class="PaladinSelected"><img src="images/_paladin/<?php classValues($classes['Paladin']['specs'], 2); ?>.jpg"></span>
+				<span class="PriestSelected"><img src="images/_priest/<?php classValues($classes['Priest']['specs'], 2); ?>.jpg"></span>
+				<span class="RogueSelected"><img src="images/_rogue/<?php classValues($classes['Rogue']['specs'], 2); ?>.jpg"></span>
+				<span class="ShamanSelected"><img src="images/_shaman/<?php classValues($classes['Shaman']['specs'], 2); ?>.jpg"></span>
+				<span class="WarlockSelected"><img src="images/_warlock/<?php classValues($classes['Warlock']['specs'], 2); ?>.jpg"></span>
+				<span class="WarriorSelected"><img src="images/_warrior/<?php classValues($classes['Warrior']['specs'], 2); ?>.jpg"></span>
 			</div>
 			
 			<div class="talentText">
@@ -204,7 +200,7 @@ require('_includes/header.php');
 		<div id="spec4" class="specTalent">
 		
 			<div class="talentIcon">
-				<span class="DruidSelected"><img src="_images/_druid/<?php classValues($classes['Druid']['specs'], 3); ?>.jpg"></span>
+				<span class="DruidSelected"><img src="images/_druid/<?php classValues($classes['Druid']['specs'], 3); ?>.jpg"></span>
 			</div>
 			
 			<div class="talentText">
@@ -226,17 +222,17 @@ require('_includes/header.php');
 		<div id="lev15Talent1" class="specTalent">
 		
 			<div class="talentIcon">
-				<span class="DeathKnightSelected"><img src="_images/_deathknight/_talents/_lev15/<?php classValues($classes['Death Knight']['talents']['lev15'], 0); ?>.jpg"></span>
-				<span class="DruidSelected"><img src="_images/_druid/_talents/_lev15/<?php classValues($classes['Druid']['talents']['lev15'], 0); ?>.jpg"></span>
-				<span class="HunterSelected"><img src="_images/_hunter/_talents/_lev15/<?php classValues($classes['Hunter']['talents']['lev15'], 0); ?>.jpg"></span>
-				<span class="MageSelected"><img src="_images/_mage/_talents/_lev15/<?php classValues($classes['Mage']['talents']['lev15'], 0); ?>.jpg"></span>
-				<span class="MonkSelected"><img src="_images/_monk/_talents/_lev15/<?php classValues($classes['Monk']['talents']['lev15'], 0); ?>.jpg"></span>
-				<span class="PaladinSelected"><img src="_images/_paladin/_talents/_lev15/<?php classValues($classes['Paladin']['talents']['lev15'], 0); ?>.jpg"></span>
-				<span class="PriestSelected"><img src="_images/_priest/_talents/_lev15/<?php classValues($classes['Priest']['talents']['lev15'], 0); ?>.jpg"></span>
-				<span class="RogueSelected"><img src="_images/_rogue/_talents/_lev15/<?php classValues($classes['Rogue']['talents']['lev15'], 0); ?>.jpg"></span>
-				<span class="ShamanSelected"><img src="_images/_shaman/_talents/_lev15/<?php classValues($classes['Shaman']['talents']['lev15'], 0); ?>.jpg"></span>
-				<span class="WarlockSelected"><img src="_images/_warlock/_talents/_lev15/<?php classValues($classes['Warlock']['talents']['lev15'], 0); ?>.jpg"></span>
-				<span class="WarriorSelected"><img src="_images/_warrior/_talents/_lev15/<?php classValues($classes['Warrior']['talents']['lev15'], 0); ?>.jpg"></span>
+				<span class="DeathKnightSelected"><img src="images/_deathknight/_talents/_lev15/<?php classValues($classes['Death Knight']['talents']['lev15'], 0); ?>.jpg"></span>
+				<span class="DruidSelected"><img src="images/_druid/_talents/_lev15/<?php classValues($classes['Druid']['talents']['lev15'], 0); ?>.jpg"></span>
+				<span class="HunterSelected"><img src="images/_hunter/_talents/_lev15/<?php classValues($classes['Hunter']['talents']['lev15'], 0); ?>.jpg"></span>
+				<span class="MageSelected"><img src="images/_mage/_talents/_lev15/<?php classValues($classes['Mage']['talents']['lev15'], 0); ?>.jpg"></span>
+				<span class="MonkSelected"><img src="images/_monk/_talents/_lev15/<?php classValues($classes['Monk']['talents']['lev15'], 0); ?>.jpg"></span>
+				<span class="PaladinSelected"><img src="images/_paladin/_talents/_lev15/<?php classValues($classes['Paladin']['talents']['lev15'], 0); ?>.jpg"></span>
+				<span class="PriestSelected"><img src="images/_priest/_talents/_lev15/<?php classValues($classes['Priest']['talents']['lev15'], 0); ?>.jpg"></span>
+				<span class="RogueSelected"><img src="images/_rogue/_talents/_lev15/<?php classValues($classes['Rogue']['talents']['lev15'], 0); ?>.jpg"></span>
+				<span class="ShamanSelected"><img src="images/_shaman/_talents/_lev15/<?php classValues($classes['Shaman']['talents']['lev15'], 0); ?>.jpg"></span>
+				<span class="WarlockSelected"><img src="images/_warlock/_talents/_lev15/<?php classValues($classes['Warlock']['talents']['lev15'], 0); ?>.jpg"></span>
+				<span class="WarriorSelected"><img src="images/_warrior/_talents/_lev15/<?php classValues($classes['Warrior']['talents']['lev15'], 0); ?>.jpg"></span>
 			</div>
 			
 			<div class="talentText">
@@ -260,17 +256,17 @@ require('_includes/header.php');
 		<div id="lev15Talent2" class="specTalent">
 		
 			<div class="talentIcon">
-				<span class="DeathKnightSelected"><img src="_images/_deathknight/_talents/_lev15/<?php classValues($classes['Death Knight']['talents']['lev15'], 1); ?>.jpg"></span>
-				<span class="DruidSelected"><img src="_images/_druid/_talents/_lev15/<?php classValues($classes['Druid']['talents']['lev15'], 1); ?>.jpg"></span>
-				<span class="HunterSelected"><img src="_images/_hunter/_talents/_lev15/<?php classValues($classes['Hunter']['talents']['lev15'], 1); ?>.jpg"></span>
-				<span class="MageSelected"><img src="_images/_mage/_talents/_lev15/<?php classValues($classes['Mage']['talents']['lev15'], 1); ?>.jpg"></span>
-				<span class="MonkSelected"><img src="_images/_monk/_talents/_lev15/<?php classValues($classes['Monk']['talents']['lev15'], 1); ?>.jpg"></span>
-				<span class="PaladinSelected"><img src="_images/_paladin/_talents/_lev15/<?php classValues($classes['Paladin']['talents']['lev15'], 1); ?>.jpg"></span>
-				<span class="PriestSelected"><img src="_images/_priest/_talents/_lev15/<?php classValues($classes['Priest']['talents']['lev15'], 1); ?>.jpg"></span>
-				<span class="RogueSelected"><img src="_images/_rogue/_talents/_lev15/<?php classValues($classes['Rogue']['talents']['lev15'], 1); ?>.jpg"></span>
-				<span class="ShamanSelected"><img src="_images/_shaman/_talents/_lev15/<?php classValues($classes['Shaman']['talents']['lev15'], 1); ?>.jpg"></span>
-				<span class="WarlockSelected"><img src="_images/_warlock/_talents/_lev15/<?php classValues($classes['Warlock']['talents']['lev15'], 1); ?>.jpg"></span>
-				<span class="WarriorSelected"><img src="_images/_warrior/_talents/_lev15/<?php classValues($classes['Warrior']['talents']['lev15'], 1); ?>.jpg"></span>
+				<span class="DeathKnightSelected"><img src="images/_deathknight/_talents/_lev15/<?php classValues($classes['Death Knight']['talents']['lev15'], 1); ?>.jpg"></span>
+				<span class="DruidSelected"><img src="images/_druid/_talents/_lev15/<?php classValues($classes['Druid']['talents']['lev15'], 1); ?>.jpg"></span>
+				<span class="HunterSelected"><img src="images/_hunter/_talents/_lev15/<?php classValues($classes['Hunter']['talents']['lev15'], 1); ?>.jpg"></span>
+				<span class="MageSelected"><img src="images/_mage/_talents/_lev15/<?php classValues($classes['Mage']['talents']['lev15'], 1); ?>.jpg"></span>
+				<span class="MonkSelected"><img src="images/_monk/_talents/_lev15/<?php classValues($classes['Monk']['talents']['lev15'], 1); ?>.jpg"></span>
+				<span class="PaladinSelected"><img src="images/_paladin/_talents/_lev15/<?php classValues($classes['Paladin']['talents']['lev15'], 1); ?>.jpg"></span>
+				<span class="PriestSelected"><img src="images/_priest/_talents/_lev15/<?php classValues($classes['Priest']['talents']['lev15'], 1); ?>.jpg"></span>
+				<span class="RogueSelected"><img src="images/_rogue/_talents/_lev15/<?php classValues($classes['Rogue']['talents']['lev15'], 1); ?>.jpg"></span>
+				<span class="ShamanSelected"><img src="images/_shaman/_talents/_lev15/<?php classValues($classes['Shaman']['talents']['lev15'], 1); ?>.jpg"></span>
+				<span class="WarlockSelected"><img src="images/_warlock/_talents/_lev15/<?php classValues($classes['Warlock']['talents']['lev15'], 1); ?>.jpg"></span>
+				<span class="WarriorSelected"><img src="images/_warrior/_talents/_lev15/<?php classValues($classes['Warrior']['talents']['lev15'], 1); ?>.jpg"></span>
 			</div>
 			
 			<div class="talentText">
@@ -294,17 +290,17 @@ require('_includes/header.php');
 		<div id="lev15Talent3" class="specTalent">
 		
 			<div class="talentIcon">
-				<span class="DeathKnightSelected"><img src="_images/_deathknight/_talents/_lev15/<?php classValues($classes['Death Knight']['talents']['lev15'], 2); ?>.jpg"></span>
-				<span class="DruidSelected"><img src="_images/_druid/_talents/_lev15/<?php classValues($classes['Druid']['talents']['lev15'], 2); ?>.jpg"></span>
-				<span class="HunterSelected"><img src="_images/_hunter/_talents/_lev15/<?php classValues($classes['Hunter']['talents']['lev15'], 2); ?>.jpg"></span>
-				<span class="MageSelected"><img src="_images/_mage/_talents/_lev15/<?php classValues($classes['Mage']['talents']['lev15'], 2); ?>.jpg"></span>
-				<span class="MonkSelected"><img src="_images/_monk/_talents/_lev15/<?php classValues($classes['Monk']['talents']['lev15'], 2); ?>.jpg"></span>
-				<span class="PaladinSelected"><img src="_images/_paladin/_talents/_lev15/<?php classValues($classes['Paladin']['talents']['lev15'], 2); ?>.jpg"></span>
-				<span class="PriestSelected"><img src="_images/_priest/_talents/_lev15/<?php classValues($classes['Priest']['talents']['lev15'], 2); ?>.jpg"></span>
-				<span class="RogueSelected"><img src="_images/_rogue/_talents/_lev15/<?php classValues($classes['Rogue']['talents']['lev15'], 2); ?>.jpg"></span>
-				<span class="ShamanSelected"><img src="_images/_shaman/_talents/_lev15/<?php classValues($classes['Shaman']['talents']['lev15'], 2); ?>.jpg"></span>
-				<span class="WarlockSelected"><img src="_images/_warlock/_talents/_lev15/<?php classValues($classes['Warlock']['talents']['lev15'], 2); ?>.jpg"></span>
-				<span class="WarriorSelected"><img src="_images/_warrior/_talents/_lev15/<?php classValues($classes['Warrior']['talents']['lev15'], 2); ?>.jpg"></span>
+				<span class="DeathKnightSelected"><img src="images/_deathknight/_talents/_lev15/<?php classValues($classes['Death Knight']['talents']['lev15'], 2); ?>.jpg"></span>
+				<span class="DruidSelected"><img src="images/_druid/_talents/_lev15/<?php classValues($classes['Druid']['talents']['lev15'], 2); ?>.jpg"></span>
+				<span class="HunterSelected"><img src="images/_hunter/_talents/_lev15/<?php classValues($classes['Hunter']['talents']['lev15'], 2); ?>.jpg"></span>
+				<span class="MageSelected"><img src="images/_mage/_talents/_lev15/<?php classValues($classes['Mage']['talents']['lev15'], 2); ?>.jpg"></span>
+				<span class="MonkSelected"><img src="images/_monk/_talents/_lev15/<?php classValues($classes['Monk']['talents']['lev15'], 2); ?>.jpg"></span>
+				<span class="PaladinSelected"><img src="images/_paladin/_talents/_lev15/<?php classValues($classes['Paladin']['talents']['lev15'], 2); ?>.jpg"></span>
+				<span class="PriestSelected"><img src="images/_priest/_talents/_lev15/<?php classValues($classes['Priest']['talents']['lev15'], 2); ?>.jpg"></span>
+				<span class="RogueSelected"><img src="images/_rogue/_talents/_lev15/<?php classValues($classes['Rogue']['talents']['lev15'], 2); ?>.jpg"></span>
+				<span class="ShamanSelected"><img src="images/_shaman/_talents/_lev15/<?php classValues($classes['Shaman']['talents']['lev15'], 2); ?>.jpg"></span>
+				<span class="WarlockSelected"><img src="images/_warlock/_talents/_lev15/<?php classValues($classes['Warlock']['talents']['lev15'], 2); ?>.jpg"></span>
+				<span class="WarriorSelected"><img src="images/_warrior/_talents/_lev15/<?php classValues($classes['Warrior']['talents']['lev15'], 2); ?>.jpg"></span>
 			</div>
 			
 			<div class="talentText">
@@ -336,17 +332,17 @@ require('_includes/header.php');
 		<div id="lev30Talent1" class="specTalent">
 			
 			<div class="talentIcon">
-				<span class="DeathKnightSelected"><img src="_images/_deathknight/_talents/_lev30/<?php classValues($classes['Death Knight']['talents']['lev30'], 0); ?>.jpg"></span>
-				<span class="DruidSelected"><img src="_images/_druid/_talents/_lev30/<?php classValues($classes['Druid']['talents']['lev30'], 0); ?>.jpg"></span>
-				<span class="HunterSelected"><img src="_images/_hunter/_talents/_lev30/<?php classValues($classes['Hunter']['talents']['lev30'], 0); ?>.jpg"></span>
-				<span class="MageSelected"><img src="_images/_mage/_talents/_lev30/<?php classValues($classes['Mage']['talents']['lev30'], 0); ?>.jpg"></span>
-				<span class="MonkSelected"><img src="_images/_monk/_talents/_lev30/<?php classValues($classes['Monk']['talents']['lev30'], 0); ?>.jpg"></span>
-				<span class="PaladinSelected"><img src="_images/_paladin/_talents/_lev30/<?php classValues($classes['Paladin']['talents']['lev30'], 0); ?>.jpg"></span>
-				<span class="PriestSelected"><img src="_images/_priest/_talents/_lev30/<?php classValues($classes['Priest']['talents']['lev30'], 0); ?>.jpg"></span>
-				<span class="RogueSelected"><img src="_images/_rogue/_talents/_lev30/<?php classValues($classes['Rogue']['talents']['lev30'], 0); ?>.jpg"></span>
-				<span class="ShamanSelected"><img src="_images/_shaman/_talents/_lev30/<?php classValues($classes['Shaman']['talents']['lev30'], 0); ?>.jpg"></span>
-				<span class="WarlockSelected"><img src="_images/_warlock/_talents/_lev30/<?php classValues($classes['Warlock']['talents']['lev30'], 0); ?>.jpg"></span>
-				<span class="WarriorSelected"><img src="_images/_warrior/_talents/_lev30/<?php classValues($classes['Warrior']['talents']['lev30'], 0); ?>.jpg"></span>
+				<span class="DeathKnightSelected"><img src="images/_deathknight/_talents/_lev30/<?php classValues($classes['Death Knight']['talents']['lev30'], 0); ?>.jpg"></span>
+				<span class="DruidSelected"><img src="images/_druid/_talents/_lev30/<?php classValues($classes['Druid']['talents']['lev30'], 0); ?>.jpg"></span>
+				<span class="HunterSelected"><img src="images/_hunter/_talents/_lev30/<?php classValues($classes['Hunter']['talents']['lev30'], 0); ?>.jpg"></span>
+				<span class="MageSelected"><img src="images/_mage/_talents/_lev30/<?php classValues($classes['Mage']['talents']['lev30'], 0); ?>.jpg"></span>
+				<span class="MonkSelected"><img src="images/_monk/_talents/_lev30/<?php classValues($classes['Monk']['talents']['lev30'], 0); ?>.jpg"></span>
+				<span class="PaladinSelected"><img src="images/_paladin/_talents/_lev30/<?php classValues($classes['Paladin']['talents']['lev30'], 0); ?>.jpg"></span>
+				<span class="PriestSelected"><img src="images/_priest/_talents/_lev30/<?php classValues($classes['Priest']['talents']['lev30'], 0); ?>.jpg"></span>
+				<span class="RogueSelected"><img src="images/_rogue/_talents/_lev30/<?php classValues($classes['Rogue']['talents']['lev30'], 0); ?>.jpg"></span>
+				<span class="ShamanSelected"><img src="images/_shaman/_talents/_lev30/<?php classValues($classes['Shaman']['talents']['lev30'], 0); ?>.jpg"></span>
+				<span class="WarlockSelected"><img src="images/_warlock/_talents/_lev30/<?php classValues($classes['Warlock']['talents']['lev30'], 0); ?>.jpg"></span>
+				<span class="WarriorSelected"><img src="images/_warrior/_talents/_lev30/<?php classValues($classes['Warrior']['talents']['lev30'], 0); ?>.jpg"></span>
 			</div>
 			
 			<div class="talentText">
@@ -370,17 +366,17 @@ require('_includes/header.php');
 		<div id="lev30Talent2" class="specTalent">
 			
 			<div class="talentIcon">
-				<span class="DeathKnightSelected"><img src="_images/_deathknight/_talents/_lev30/<?php classValues($classes['Death Knight']['talents']['lev30'], 1); ?>.jpg"></span>
-				<span class="DruidSelected"><img src="_images/_druid/_talents/_lev30/<?php classValues($classes['Druid']['talents']['lev30'], 1); ?>.jpg"></span>
-				<span class="HunterSelected"><img src="_images/_hunter/_talents/_lev30/<?php classValues($classes['Hunter']['talents']['lev30'], 1); ?>.jpg"></span>
-				<span class="MageSelected"><img src="_images/_mage/_talents/_lev30/<?php classValues($classes['Mage']['talents']['lev30'], 1); ?>.jpg"></span>
-				<span class="MonkSelected"><img src="_images/_monk/_talents/_lev30/<?php classValues($classes['Monk']['talents']['lev30'], 1); ?>.jpg"></span>
-				<span class="PaladinSelected"><img src="_images/_paladin/_talents/_lev30/<?php classValues($classes['Paladin']['talents']['lev30'], 1); ?>.jpg"></span>
-				<span class="PriestSelected"><img src="_images/_priest/_talents/_lev30/<?php classValues($classes['Priest']['talents']['lev30'], 1); ?>.jpg"></span>
-				<span class="RogueSelected"><img src="_images/_rogue/_talents/_lev30/<?php classValues($classes['Rogue']['talents']['lev30'], 1); ?>.jpg"></span>
-				<span class="ShamanSelected"><img src="_images/_shaman/_talents/_lev30/<?php classValues($classes['Shaman']['talents']['lev30'], 1); ?>.jpg"></span>
-				<span class="WarlockSelected"><img src="_images/_warlock/_talents/_lev30/<?php classValues($classes['Warlock']['talents']['lev30'], 1); ?>.jpg"></span>
-				<span class="WarriorSelected"><img src="_images/_warrior/_talents/_lev30/<?php classValues($classes['Warrior']['talents']['lev30'], 1); ?>.jpg"></span>
+				<span class="DeathKnightSelected"><img src="images/_deathknight/_talents/_lev30/<?php classValues($classes['Death Knight']['talents']['lev30'], 1); ?>.jpg"></span>
+				<span class="DruidSelected"><img src="images/_druid/_talents/_lev30/<?php classValues($classes['Druid']['talents']['lev30'], 1); ?>.jpg"></span>
+				<span class="HunterSelected"><img src="images/_hunter/_talents/_lev30/<?php classValues($classes['Hunter']['talents']['lev30'], 1); ?>.jpg"></span>
+				<span class="MageSelected"><img src="images/_mage/_talents/_lev30/<?php classValues($classes['Mage']['talents']['lev30'], 1); ?>.jpg"></span>
+				<span class="MonkSelected"><img src="images/_monk/_talents/_lev30/<?php classValues($classes['Monk']['talents']['lev30'], 1); ?>.jpg"></span>
+				<span class="PaladinSelected"><img src="images/_paladin/_talents/_lev30/<?php classValues($classes['Paladin']['talents']['lev30'], 1); ?>.jpg"></span>
+				<span class="PriestSelected"><img src="images/_priest/_talents/_lev30/<?php classValues($classes['Priest']['talents']['lev30'], 1); ?>.jpg"></span>
+				<span class="RogueSelected"><img src="images/_rogue/_talents/_lev30/<?php classValues($classes['Rogue']['talents']['lev30'], 1); ?>.jpg"></span>
+				<span class="ShamanSelected"><img src="images/_shaman/_talents/_lev30/<?php classValues($classes['Shaman']['talents']['lev30'], 1); ?>.jpg"></span>
+				<span class="WarlockSelected"><img src="images/_warlock/_talents/_lev30/<?php classValues($classes['Warlock']['talents']['lev30'], 1); ?>.jpg"></span>
+				<span class="WarriorSelected"><img src="images/_warrior/_talents/_lev30/<?php classValues($classes['Warrior']['talents']['lev30'], 1); ?>.jpg"></span>
 			</div>
 			
 			<div class="talentText">
@@ -404,17 +400,17 @@ require('_includes/header.php');
 		<div id="lev30Talent3" class="specTalent">
 			
 			<div class="talentIcon">
-				<span class="DeathKnightSelected"><img src="_images/_deathknight/_talents/_lev30/<?php classValues($classes['Death Knight']['talents']['lev30'], 2); ?>.jpg"></span>
-				<span class="DruidSelected"><img src="_images/_druid/_talents/_lev30/<?php classValues($classes['Druid']['talents']['lev30'], 2); ?>.jpg"></span>
-				<span class="HunterSelected"><img src="_images/_hunter/_talents/_lev30/<?php classValues($classes['Hunter']['talents']['lev30'], 2); ?>.jpg"></span>
-				<span class="MageSelected"><img src="_images/_mage/_talents/_lev30/<?php classValues($classes['Mage']['talents']['lev30'], 2); ?>.jpg"></span>
-				<span class="MonkSelected"><img src="_images/_monk/_talents/_lev30/<?php classValues($classes['Monk']['talents']['lev30'], 2); ?>.jpg"></span>
-				<span class="PaladinSelected"><img src="_images/_paladin/_talents/_lev30/<?php classValues($classes['Paladin']['talents']['lev30'], 2); ?>.jpg"></span>
-				<span class="PriestSelected"><img src="_images/_priest/_talents/_lev30/<?php classValues($classes['Priest']['talents']['lev30'], 2); ?>.jpg"></span>
-				<span class="RogueSelected"><img src="_images/_rogue/_talents/_lev30/<?php classValues($classes['Rogue']['talents']['lev30'], 2); ?>.jpg"></span>
-				<span class="ShamanSelected"><img src="_images/_shaman/_talents/_lev30/<?php classValues($classes['Shaman']['talents']['lev30'], 2); ?>.jpg"></span>
-				<span class="WarlockSelected"><img src="_images/_warlock/_talents/_lev30/<?php classValues($classes['Warlock']['talents']['lev30'], 2); ?>.jpg"></span>
-				<span class="WarriorSelected"><img src="_images/_warrior/_talents/_lev30/<?php classValues($classes['Warrior']['talents']['lev30'], 2); ?>.jpg"></span>
+				<span class="DeathKnightSelected"><img src="images/_deathknight/_talents/_lev30/<?php classValues($classes['Death Knight']['talents']['lev30'], 2); ?>.jpg"></span>
+				<span class="DruidSelected"><img src="images/_druid/_talents/_lev30/<?php classValues($classes['Druid']['talents']['lev30'], 2); ?>.jpg"></span>
+				<span class="HunterSelected"><img src="images/_hunter/_talents/_lev30/<?php classValues($classes['Hunter']['talents']['lev30'], 2); ?>.jpg"></span>
+				<span class="MageSelected"><img src="images/_mage/_talents/_lev30/<?php classValues($classes['Mage']['talents']['lev30'], 2); ?>.jpg"></span>
+				<span class="MonkSelected"><img src="images/_monk/_talents/_lev30/<?php classValues($classes['Monk']['talents']['lev30'], 2); ?>.jpg"></span>
+				<span class="PaladinSelected"><img src="images/_paladin/_talents/_lev30/<?php classValues($classes['Paladin']['talents']['lev30'], 2); ?>.jpg"></span>
+				<span class="PriestSelected"><img src="images/_priest/_talents/_lev30/<?php classValues($classes['Priest']['talents']['lev30'], 2); ?>.jpg"></span>
+				<span class="RogueSelected"><img src="images/_rogue/_talents/_lev30/<?php classValues($classes['Rogue']['talents']['lev30'], 2); ?>.jpg"></span>
+				<span class="ShamanSelected"><img src="images/_shaman/_talents/_lev30/<?php classValues($classes['Shaman']['talents']['lev30'], 2); ?>.jpg"></span>
+				<span class="WarlockSelected"><img src="images/_warlock/_talents/_lev30/<?php classValues($classes['Warlock']['talents']['lev30'], 2); ?>.jpg"></span>
+				<span class="WarriorSelected"><img src="images/_warrior/_talents/_lev30/<?php classValues($classes['Warrior']['talents']['lev30'], 2); ?>.jpg"></span>
 			</div>
 			
 			<div class="talentText">
@@ -446,17 +442,17 @@ require('_includes/header.php');
 		<div id="lev45Talent1" class="specTalent">
 			
 			<div class="talentIcon">
-				<span class="DeathKnightSelected"><img src="_images/_deathknight/_talents/_lev45/<?php classValues($classes['Death Knight']['talents']['lev45'], 0); ?>.jpg"></span>
-				<span class="DruidSelected"><img src="_images/_druid/_talents/_lev45/<?php classValues($classes['Druid']['talents']['lev45'], 0); ?>.jpg"></span>
-				<span class="HunterSelected"><img src="_images/_hunter/_talents/_lev45/<?php classValues($classes['Hunter']['talents']['lev45'], 0); ?>.jpg"></span>
-				<span class="MageSelected"><img src="_images/_mage/_talents/_lev45/<?php classValues($classes['Mage']['talents']['lev45'], 0); ?>.jpg"></span>
-				<span class="MonkSelected"><img src="_images/_monk/_talents/_lev45/<?php classValues($classes['Monk']['talents']['lev45'], 0); ?>.jpg"></span>
-				<span class="PaladinSelected"><img src="_images/_paladin/_talents/_lev45/<?php classValues($classes['Paladin']['talents']['lev45'], 0); ?>.jpg"></span>
-				<span class="PriestSelected"><img src="_images/_priest/_talents/_lev45/<?php classValues($classes['Priest']['talents']['lev45'], 0); ?>.jpg"></span>
-				<span class="RogueSelected"><img src="_images/_rogue/_talents/_lev45/<?php classValues($classes['Rogue']['talents']['lev45'], 0); ?>.jpg"></span>
-				<span class="ShamanSelected"><img src="_images/_shaman/_talents/_lev45/<?php classValues($classes['Shaman']['talents']['lev45'], 0); ?>.jpg"></span>
-				<span class="WarlockSelected"><img src="_images/_warlock/_talents/_lev45/<?php classValues($classes['Warlock']['talents']['lev45'], 0); ?>.jpg"></span>
-				<span class="WarriorSelected"><img src="_images/_warrior/_talents/_lev45/<?php classValues($classes['Warrior']['talents']['lev45'], 0); ?>.jpg"></span>
+				<span class="DeathKnightSelected"><img src="images/_deathknight/_talents/_lev45/<?php classValues($classes['Death Knight']['talents']['lev45'], 0); ?>.jpg"></span>
+				<span class="DruidSelected"><img src="images/_druid/_talents/_lev45/<?php classValues($classes['Druid']['talents']['lev45'], 0); ?>.jpg"></span>
+				<span class="HunterSelected"><img src="images/_hunter/_talents/_lev45/<?php classValues($classes['Hunter']['talents']['lev45'], 0); ?>.jpg"></span>
+				<span class="MageSelected"><img src="images/_mage/_talents/_lev45/<?php classValues($classes['Mage']['talents']['lev45'], 0); ?>.jpg"></span>
+				<span class="MonkSelected"><img src="images/_monk/_talents/_lev45/<?php classValues($classes['Monk']['talents']['lev45'], 0); ?>.jpg"></span>
+				<span class="PaladinSelected"><img src="images/_paladin/_talents/_lev45/<?php classValues($classes['Paladin']['talents']['lev45'], 0); ?>.jpg"></span>
+				<span class="PriestSelected"><img src="images/_priest/_talents/_lev45/<?php classValues($classes['Priest']['talents']['lev45'], 0); ?>.jpg"></span>
+				<span class="RogueSelected"><img src="images/_rogue/_talents/_lev45/<?php classValues($classes['Rogue']['talents']['lev45'], 0); ?>.jpg"></span>
+				<span class="ShamanSelected"><img src="images/_shaman/_talents/_lev45/<?php classValues($classes['Shaman']['talents']['lev45'], 0); ?>.jpg"></span>
+				<span class="WarlockSelected"><img src="images/_warlock/_talents/_lev45/<?php classValues($classes['Warlock']['talents']['lev45'], 0); ?>.jpg"></span>
+				<span class="WarriorSelected"><img src="images/_warrior/_talents/_lev45/<?php classValues($classes['Warrior']['talents']['lev45'], 0); ?>.jpg"></span>
 			</div>
 			
 			<div class="talentText">
@@ -480,17 +476,17 @@ require('_includes/header.php');
 		<div id="lev45Talent2" class="specTalent">
 			
 			<div class="talentIcon">
-				<span class="DeathKnightSelected"><img src="_images/_deathknight/_talents/_lev45/<?php classValues($classes['Death Knight']['talents']['lev45'], 1); ?>.jpg"></span>
-				<span class="DruidSelected"><img src="_images/_druid/_talents/_lev45/<?php classValues($classes['Druid']['talents']['lev45'], 1); ?>.jpg"></span>
-				<span class="HunterSelected"><img src="_images/_hunter/_talents/_lev45/<?php classValues($classes['Hunter']['talents']['lev45'], 1); ?>.jpg"></span>
-				<span class="MageSelected"><img src="_images/_mage/_talents/_lev45/<?php classValues($classes['Mage']['talents']['lev45'], 1); ?>.jpg"></span>
-				<span class="MonkSelected"><img src="_images/_monk/_talents/_lev45/<?php classValues($classes['Monk']['talents']['lev45'], 1); ?>.jpg"></span>
-				<span class="PaladinSelected"><img src="_images/_paladin/_talents/_lev45/<?php classValues($classes['Paladin']['talents']['lev45'], 1); ?>.jpg"></span>
-				<span class="PriestSelected"><img src="_images/_priest/_talents/_lev45/<?php classValues($classes['Priest']['talents']['lev45'], 1); ?>.jpg"></span>
-				<span class="RogueSelected"><img src="_images/_rogue/_talents/_lev45/<?php classValues($classes['Rogue']['talents']['lev45'], 1); ?>.jpg"></span>
-				<span class="ShamanSelected"><img src="_images/_shaman/_talents/_lev45/<?php classValues($classes['Shaman']['talents']['lev45'], 1); ?>.jpg"></span>
-				<span class="WarlockSelected"><img src="_images/_warlock/_talents/_lev45/<?php classValues($classes['Warlock']['talents']['lev45'], 1); ?>.jpg"></span>
-				<span class="WarriorSelected"><img src="_images/_warrior/_talents/_lev45/<?php classValues($classes['Warrior']['talents']['lev45'], 1); ?>.jpg"></span>
+				<span class="DeathKnightSelected"><img src="images/_deathknight/_talents/_lev45/<?php classValues($classes['Death Knight']['talents']['lev45'], 1); ?>.jpg"></span>
+				<span class="DruidSelected"><img src="images/_druid/_talents/_lev45/<?php classValues($classes['Druid']['talents']['lev45'], 1); ?>.jpg"></span>
+				<span class="HunterSelected"><img src="images/_hunter/_talents/_lev45/<?php classValues($classes['Hunter']['talents']['lev45'], 1); ?>.jpg"></span>
+				<span class="MageSelected"><img src="images/_mage/_talents/_lev45/<?php classValues($classes['Mage']['talents']['lev45'], 1); ?>.jpg"></span>
+				<span class="MonkSelected"><img src="images/_monk/_talents/_lev45/<?php classValues($classes['Monk']['talents']['lev45'], 1); ?>.jpg"></span>
+				<span class="PaladinSelected"><img src="images/_paladin/_talents/_lev45/<?php classValues($classes['Paladin']['talents']['lev45'], 1); ?>.jpg"></span>
+				<span class="PriestSelected"><img src="images/_priest/_talents/_lev45/<?php classValues($classes['Priest']['talents']['lev45'], 1); ?>.jpg"></span>
+				<span class="RogueSelected"><img src="images/_rogue/_talents/_lev45/<?php classValues($classes['Rogue']['talents']['lev45'], 1); ?>.jpg"></span>
+				<span class="ShamanSelected"><img src="images/_shaman/_talents/_lev45/<?php classValues($classes['Shaman']['talents']['lev45'], 1); ?>.jpg"></span>
+				<span class="WarlockSelected"><img src="images/_warlock/_talents/_lev45/<?php classValues($classes['Warlock']['talents']['lev45'], 1); ?>.jpg"></span>
+				<span class="WarriorSelected"><img src="images/_warrior/_talents/_lev45/<?php classValues($classes['Warrior']['talents']['lev45'], 1); ?>.jpg"></span>
 			</div>
 			
 			<div class="talentText">
@@ -514,17 +510,17 @@ require('_includes/header.php');
 		<div id="lev45Talent3" class="specTalent">
 			
 			<div class="talentIcon">
-				<span class="DeathKnightSelected"><img src="_images/_deathknight/_talents/_lev45/<?php classValues($classes['Death Knight']['talents']['lev45'], 2); ?>.jpg"></span>
-				<span class="DruidSelected"><img src="_images/_druid/_talents/_lev45/<?php classValues($classes['Druid']['talents']['lev45'], 2); ?>.jpg"></span>
-				<span class="HunterSelected"><img src="_images/_hunter/_talents/_lev45/<?php classValues($classes['Hunter']['talents']['lev45'], 2); ?>.jpg"></span>
-				<span class="MageSelected"><img src="_images/_mage/_talents/_lev45/<?php classValues($classes['Mage']['talents']['lev45'], 2); ?>.jpg"></span>
-				<span class="MonkSelected"><img src="_images/_monk/_talents/_lev45/<?php classValues($classes['Monk']['talents']['lev45'], 2); ?>.jpg"></span>
-				<span class="PaladinSelected"><img src="_images/_paladin/_talents/_lev45/<?php classValues($classes['Paladin']['talents']['lev45'], 2); ?>.jpg"></span>
-				<span class="PriestSelected"><img src="_images/_priest/_talents/_lev45/<?php classValues($classes['Priest']['talents']['lev45'], 2); ?>.jpg"></span>
-				<span class="RogueSelected"><img src="_images/_rogue/_talents/_lev45/<?php classValues($classes['Rogue']['talents']['lev45'], 2); ?>.jpg"></span>
-				<span class="ShamanSelected"><img src="_images/_shaman/_talents/_lev45/<?php classValues($classes['Shaman']['talents']['lev45'], 2); ?>.jpg"></span>
-				<span class="WarlockSelected"><img src="_images/_warlock/_talents/_lev45/<?php classValues($classes['Warlock']['talents']['lev45'], 2); ?>.jpg"></span>
-				<span class="WarriorSelected"><img src="_images/_warrior/_talents/_lev45/<?php classValues($classes['Warrior']['talents']['lev45'], 2); ?>.jpg"></span>
+				<span class="DeathKnightSelected"><img src="images/_deathknight/_talents/_lev45/<?php classValues($classes['Death Knight']['talents']['lev45'], 2); ?>.jpg"></span>
+				<span class="DruidSelected"><img src="images/_druid/_talents/_lev45/<?php classValues($classes['Druid']['talents']['lev45'], 2); ?>.jpg"></span>
+				<span class="HunterSelected"><img src="images/_hunter/_talents/_lev45/<?php classValues($classes['Hunter']['talents']['lev45'], 2); ?>.jpg"></span>
+				<span class="MageSelected"><img src="images/_mage/_talents/_lev45/<?php classValues($classes['Mage']['talents']['lev45'], 2); ?>.jpg"></span>
+				<span class="MonkSelected"><img src="images/_monk/_talents/_lev45/<?php classValues($classes['Monk']['talents']['lev45'], 2); ?>.jpg"></span>
+				<span class="PaladinSelected"><img src="images/_paladin/_talents/_lev45/<?php classValues($classes['Paladin']['talents']['lev45'], 2); ?>.jpg"></span>
+				<span class="PriestSelected"><img src="images/_priest/_talents/_lev45/<?php classValues($classes['Priest']['talents']['lev45'], 2); ?>.jpg"></span>
+				<span class="RogueSelected"><img src="images/_rogue/_talents/_lev45/<?php classValues($classes['Rogue']['talents']['lev45'], 2); ?>.jpg"></span>
+				<span class="ShamanSelected"><img src="images/_shaman/_talents/_lev45/<?php classValues($classes['Shaman']['talents']['lev45'], 2); ?>.jpg"></span>
+				<span class="WarlockSelected"><img src="images/_warlock/_talents/_lev45/<?php classValues($classes['Warlock']['talents']['lev45'], 2); ?>.jpg"></span>
+				<span class="WarriorSelected"><img src="images/_warrior/_talents/_lev45/<?php classValues($classes['Warrior']['talents']['lev45'], 2); ?>.jpg"></span>
 			</div>
 			
 			<div class="talentText">
@@ -556,17 +552,17 @@ require('_includes/header.php');
 		<div id="lev60Talent1" class="specTalent">
 			
 			<div class="talentIcon">
-				<span class="DeathKnightSelected"><img src="_images/_deathknight/_talents/_lev60/<?php classValues($classes['Death Knight']['talents']['lev60'], 0); ?>.jpg"></span>
-				<span class="DruidSelected"><img src="_images/_druid/_talents/_lev60/<?php classValues($classes['Druid']['talents']['lev60'], 0); ?>.jpg"></span>
-				<span class="HunterSelected"><img src="_images/_hunter/_talents/_lev60/<?php classValues($classes['Hunter']['talents']['lev60'], 0); ?>.jpg"></span>
-				<span class="MageSelected"><img src="_images/_mage/_talents/_lev60/<?php classValues($classes['Mage']['talents']['lev60'], 0); ?>.jpg"></span>
-				<span class="MonkSelected"><img src="_images/_monk/_talents/_lev60/<?php classValues($classes['Monk']['talents']['lev60'], 0); ?>.jpg"></span>
-				<span class="PaladinSelected"><img src="_images/_paladin/_talents/_lev60/<?php classValues($classes['Paladin']['talents']['lev60'], 0); ?>.jpg"></span>
-				<span class="PriestSelected"><img src="_images/_priest/_talents/_lev60/<?php classValues($classes['Priest']['talents']['lev60'], 0); ?>.jpg"></span>
-				<span class="RogueSelected"><img src="_images/_rogue/_talents/_lev60/<?php classValues($classes['Rogue']['talents']['lev60'], 0); ?>.jpg"></span>
-				<span class="ShamanSelected"><img src="_images/_shaman/_talents/_lev60/<?php classValues($classes['Shaman']['talents']['lev60'], 0); ?>.jpg"></span>
-				<span class="WarlockSelected"><img src="_images/_warlock/_talents/_lev60/<?php classValues($classes['Warlock']['talents']['lev60'], 0); ?>.jpg"></span>
-				<span class="WarriorSelected"><img src="_images/_warrior/_talents/_lev60/<?php classValues($classes['Warrior']['talents']['lev60'], 0); ?>.jpg"></span>
+				<span class="DeathKnightSelected"><img src="images/_deathknight/_talents/_lev60/<?php classValues($classes['Death Knight']['talents']['lev60'], 0); ?>.jpg"></span>
+				<span class="DruidSelected"><img src="images/_druid/_talents/_lev60/<?php classValues($classes['Druid']['talents']['lev60'], 0); ?>.jpg"></span>
+				<span class="HunterSelected"><img src="images/_hunter/_talents/_lev60/<?php classValues($classes['Hunter']['talents']['lev60'], 0); ?>.jpg"></span>
+				<span class="MageSelected"><img src="images/_mage/_talents/_lev60/<?php classValues($classes['Mage']['talents']['lev60'], 0); ?>.jpg"></span>
+				<span class="MonkSelected"><img src="images/_monk/_talents/_lev60/<?php classValues($classes['Monk']['talents']['lev60'], 0); ?>.jpg"></span>
+				<span class="PaladinSelected"><img src="images/_paladin/_talents/_lev60/<?php classValues($classes['Paladin']['talents']['lev60'], 0); ?>.jpg"></span>
+				<span class="PriestSelected"><img src="images/_priest/_talents/_lev60/<?php classValues($classes['Priest']['talents']['lev60'], 0); ?>.jpg"></span>
+				<span class="RogueSelected"><img src="images/_rogue/_talents/_lev60/<?php classValues($classes['Rogue']['talents']['lev60'], 0); ?>.jpg"></span>
+				<span class="ShamanSelected"><img src="images/_shaman/_talents/_lev60/<?php classValues($classes['Shaman']['talents']['lev60'], 0); ?>.jpg"></span>
+				<span class="WarlockSelected"><img src="images/_warlock/_talents/_lev60/<?php classValues($classes['Warlock']['talents']['lev60'], 0); ?>.jpg"></span>
+				<span class="WarriorSelected"><img src="images/_warrior/_talents/_lev60/<?php classValues($classes['Warrior']['talents']['lev60'], 0); ?>.jpg"></span>
 			</div>
 			
 			<div class="talentText">
@@ -590,17 +586,17 @@ require('_includes/header.php');
 		<div id="lev60Talent2" class="specTalent">
 			
 			<div class="talentIcon">
-				<span class="DeathKnightSelected"><img src="_images/_deathknight/_talents/_lev60/<?php classValues($classes['Death Knight']['talents']['lev60'], 1); ?>.jpg"></span>
-				<span class="DruidSelected"><img src="_images/_druid/_talents/_lev60/<?php classValues($classes['Druid']['talents']['lev60'], 1); ?>.jpg"></span>
-				<span class="HunterSelected"><img src="_images/_hunter/_talents/_lev60/<?php classValues($classes['Hunter']['talents']['lev60'], 1); ?>.jpg"></span>
-				<span class="MageSelected"><img src="_images/_mage/_talents/_lev60/<?php classValues($classes['Mage']['talents']['lev60'], 1); ?>.jpg"></span>
-				<span class="MonkSelected"><img src="_images/_monk/_talents/_lev60/<?php classValues($classes['Monk']['talents']['lev60'], 1); ?>.jpg"></span>
-				<span class="PaladinSelected"><img src="_images/_paladin/_talents/_lev60/<?php classValues($classes['Paladin']['talents']['lev60'], 1); ?>.jpg"></span>
-				<span class="PriestSelected"><img src="_images/_priest/_talents/_lev60/<?php classValues($classes['Priest']['talents']['lev60'], 1); ?>.jpg"></span>
-				<span class="RogueSelected"><img src="_images/_rogue/_talents/_lev60/<?php classValues($classes['Rogue']['talents']['lev60'], 1); ?>.jpg"></span>
-				<span class="ShamanSelected"><img src="_images/_shaman/_talents/_lev60/<?php classValues($classes['Shaman']['talents']['lev60'], 1); ?>.jpg"></span>
-				<span class="WarlockSelected"><img src="_images/_warlock/_talents/_lev60/<?php classValues($classes['Warlock']['talents']['lev60'], 1); ?>.jpg"></span>
-				<span class="WarriorSelected"><img src="_images/_warrior/_talents/_lev60/<?php classValues($classes['Warrior']['talents']['lev60'], 1); ?>.jpg"></span>
+				<span class="DeathKnightSelected"><img src="images/_deathknight/_talents/_lev60/<?php classValues($classes['Death Knight']['talents']['lev60'], 1); ?>.jpg"></span>
+				<span class="DruidSelected"><img src="images/_druid/_talents/_lev60/<?php classValues($classes['Druid']['talents']['lev60'], 1); ?>.jpg"></span>
+				<span class="HunterSelected"><img src="images/_hunter/_talents/_lev60/<?php classValues($classes['Hunter']['talents']['lev60'], 1); ?>.jpg"></span>
+				<span class="MageSelected"><img src="images/_mage/_talents/_lev60/<?php classValues($classes['Mage']['talents']['lev60'], 1); ?>.jpg"></span>
+				<span class="MonkSelected"><img src="images/_monk/_talents/_lev60/<?php classValues($classes['Monk']['talents']['lev60'], 1); ?>.jpg"></span>
+				<span class="PaladinSelected"><img src="images/_paladin/_talents/_lev60/<?php classValues($classes['Paladin']['talents']['lev60'], 1); ?>.jpg"></span>
+				<span class="PriestSelected"><img src="images/_priest/_talents/_lev60/<?php classValues($classes['Priest']['talents']['lev60'], 1); ?>.jpg"></span>
+				<span class="RogueSelected"><img src="images/_rogue/_talents/_lev60/<?php classValues($classes['Rogue']['talents']['lev60'], 1); ?>.jpg"></span>
+				<span class="ShamanSelected"><img src="images/_shaman/_talents/_lev60/<?php classValues($classes['Shaman']['talents']['lev60'], 1); ?>.jpg"></span>
+				<span class="WarlockSelected"><img src="images/_warlock/_talents/_lev60/<?php classValues($classes['Warlock']['talents']['lev60'], 1); ?>.jpg"></span>
+				<span class="WarriorSelected"><img src="images/_warrior/_talents/_lev60/<?php classValues($classes['Warrior']['talents']['lev60'], 1); ?>.jpg"></span>
 			</div>
 			
 			<div class="talentText">
@@ -624,17 +620,17 @@ require('_includes/header.php');
 		<div id="lev60Talent3" class="specTalent">
 			
 			<div class="talentIcon">
-				<span class="DeathKnightSelected"><img src="_images/_deathknight/_talents/_lev60/<?php classValues($classes['Death Knight']['talents']['lev60'], 2); ?>.jpg"></span>
-				<span class="DruidSelected"><img src="_images/_druid/_talents/_lev60/<?php classValues($classes['Druid']['talents']['lev60'], 2); ?>.jpg"></span>
-				<span class="HunterSelected"><img src="_images/_hunter/_talents/_lev60/<?php classValues($classes['Hunter']['talents']['lev60'], 2); ?>.jpg"></span>
-				<span class="MageSelected"><img src="_images/_mage/_talents/_lev60/<?php classValues($classes['Mage']['talents']['lev60'], 2); ?>.jpg"></span>
-				<span class="MonkSelected"><img src="_images/_monk/_talents/_lev60/<?php classValues($classes['Monk']['talents']['lev60'], 2); ?>.jpg"></span>
-				<span class="PaladinSelected"><img src="_images/_paladin/_talents/_lev60/<?php classValues($classes['Paladin']['talents']['lev60'], 2); ?>.jpg"></span>
-				<span class="PriestSelected"><img src="_images/_priest/_talents/_lev60/<?php classValues($classes['Priest']['talents']['lev60'], 2); ?>.jpg"></span>
-				<span class="RogueSelected"><img src="_images/_rogue/_talents/_lev60/<?php classValues($classes['Rogue']['talents']['lev60'], 2); ?>.jpg"></span>
-				<span class="ShamanSelected"><img src="_images/_shaman/_talents/_lev60/<?php classValues($classes['Shaman']['talents']['lev60'], 2); ?>.jpg"></span>
-				<span class="WarlockSelected"><img src="_images/_warlock/_talents/_lev60/<?php classValues($classes['Warlock']['talents']['lev60'], 2); ?>.jpg"></span>
-				<span class="WarriorSelected"><img src="_images/_warrior/_talents/_lev60/<?php classValues($classes['Warrior']['talents']['lev60'], 2); ?>.jpg"></span>
+				<span class="DeathKnightSelected"><img src="images/_deathknight/_talents/_lev60/<?php classValues($classes['Death Knight']['talents']['lev60'], 2); ?>.jpg"></span>
+				<span class="DruidSelected"><img src="images/_druid/_talents/_lev60/<?php classValues($classes['Druid']['talents']['lev60'], 2); ?>.jpg"></span>
+				<span class="HunterSelected"><img src="images/_hunter/_talents/_lev60/<?php classValues($classes['Hunter']['talents']['lev60'], 2); ?>.jpg"></span>
+				<span class="MageSelected"><img src="images/_mage/_talents/_lev60/<?php classValues($classes['Mage']['talents']['lev60'], 2); ?>.jpg"></span>
+				<span class="MonkSelected"><img src="images/_monk/_talents/_lev60/<?php classValues($classes['Monk']['talents']['lev60'], 2); ?>.jpg"></span>
+				<span class="PaladinSelected"><img src="images/_paladin/_talents/_lev60/<?php classValues($classes['Paladin']['talents']['lev60'], 2); ?>.jpg"></span>
+				<span class="PriestSelected"><img src="images/_priest/_talents/_lev60/<?php classValues($classes['Priest']['talents']['lev60'], 2); ?>.jpg"></span>
+				<span class="RogueSelected"><img src="images/_rogue/_talents/_lev60/<?php classValues($classes['Rogue']['talents']['lev60'], 2); ?>.jpg"></span>
+				<span class="ShamanSelected"><img src="images/_shaman/_talents/_lev60/<?php classValues($classes['Shaman']['talents']['lev60'], 2); ?>.jpg"></span>
+				<span class="WarlockSelected"><img src="images/_warlock/_talents/_lev60/<?php classValues($classes['Warlock']['talents']['lev60'], 2); ?>.jpg"></span>
+				<span class="WarriorSelected"><img src="images/_warrior/_talents/_lev60/<?php classValues($classes['Warrior']['talents']['lev60'], 2); ?>.jpg"></span>
 			</div>
 			
 			<div class="talentText">
@@ -666,17 +662,17 @@ require('_includes/header.php');
 		<div id="lev75Talent1" class="specTalent">
 			
 			<div class="talentIcon">
-				<span class="DeathKnightSelected"><img src="_images/_deathknight/_talents/_lev75/<?php classValues($classes['Death Knight']['talents']['lev75'], 0); ?>.jpg"></span>
-				<span class="DruidSelected"><img src="_images/_druid/_talents/_lev75/<?php classValues($classes['Druid']['talents']['lev75'], 0); ?>.jpg"></span>
-				<span class="HunterSelected"><img src="_images/_hunter/_talents/_lev75/<?php classValues($classes['Hunter']['talents']['lev75'], 0); ?>.jpg"></span>
-				<span class="MageSelected"><img src="_images/_mage/_talents/_lev75/<?php classValues($classes['Mage']['talents']['lev75'], 0); ?>.jpg"></span>
-				<span class="MonkSelected"><img src="_images/_monk/_talents/_lev75/<?php classValues($classes['Monk']['talents']['lev75'], 0); ?>.jpg"></span>
-				<span class="PaladinSelected"><img src="_images/_paladin/_talents/_lev75/<?php classValues($classes['Paladin']['talents']['lev75'], 0); ?>.jpg"></span>
-				<span class="PriestSelected"><img src="_images/_priest/_talents/_lev75/<?php classValues($classes['Priest']['talents']['lev75'], 0); ?>.jpg"></span>
-				<span class="RogueSelected"><img src="_images/_rogue/_talents/_lev75/<?php classValues($classes['Rogue']['talents']['lev75'], 0); ?>.jpg"></span>
-				<span class="ShamanSelected"><img src="_images/_shaman/_talents/_lev75/<?php classValues($classes['Shaman']['talents']['lev75'], 0); ?>.jpg"></span>
-				<span class="WarlockSelected"><img src="_images/_warlock/_talents/_lev75/<?php classValues($classes['Warlock']['talents']['lev75'], 0); ?>.jpg"></span>
-				<span class="WarriorSelected"><img src="_images/_warrior/_talents/_lev75/<?php classValues($classes['Warrior']['talents']['lev75'], 0); ?>.jpg"></span>
+				<span class="DeathKnightSelected"><img src="images/_deathknight/_talents/_lev75/<?php classValues($classes['Death Knight']['talents']['lev75'], 0); ?>.jpg"></span>
+				<span class="DruidSelected"><img src="images/_druid/_talents/_lev75/<?php classValues($classes['Druid']['talents']['lev75'], 0); ?>.jpg"></span>
+				<span class="HunterSelected"><img src="images/_hunter/_talents/_lev75/<?php classValues($classes['Hunter']['talents']['lev75'], 0); ?>.jpg"></span>
+				<span class="MageSelected"><img src="images/_mage/_talents/_lev75/<?php classValues($classes['Mage']['talents']['lev75'], 0); ?>.jpg"></span>
+				<span class="MonkSelected"><img src="images/_monk/_talents/_lev75/<?php classValues($classes['Monk']['talents']['lev75'], 0); ?>.jpg"></span>
+				<span class="PaladinSelected"><img src="images/_paladin/_talents/_lev75/<?php classValues($classes['Paladin']['talents']['lev75'], 0); ?>.jpg"></span>
+				<span class="PriestSelected"><img src="images/_priest/_talents/_lev75/<?php classValues($classes['Priest']['talents']['lev75'], 0); ?>.jpg"></span>
+				<span class="RogueSelected"><img src="images/_rogue/_talents/_lev75/<?php classValues($classes['Rogue']['talents']['lev75'], 0); ?>.jpg"></span>
+				<span class="ShamanSelected"><img src="images/_shaman/_talents/_lev75/<?php classValues($classes['Shaman']['talents']['lev75'], 0); ?>.jpg"></span>
+				<span class="WarlockSelected"><img src="images/_warlock/_talents/_lev75/<?php classValues($classes['Warlock']['talents']['lev75'], 0); ?>.jpg"></span>
+				<span class="WarriorSelected"><img src="images/_warrior/_talents/_lev75/<?php classValues($classes['Warrior']['talents']['lev75'], 0); ?>.jpg"></span>
 			</div>
 			
 			<div class="talentText">
@@ -700,17 +696,17 @@ require('_includes/header.php');
 		<div id="lev75Talent2" class="specTalent">
 			
 			<div class="talentIcon">
-				<span class="DeathKnightSelected"><img src="_images/_deathknight/_talents/_lev75/<?php classValues($classes['Death Knight']['talents']['lev75'], 1); ?>.jpg"></span>
-				<span class="DruidSelected"><img src="_images/_druid/_talents/_lev75/<?php classValues($classes['Druid']['talents']['lev75'], 1); ?>.jpg"></span>
-				<span class="HunterSelected"><img src="_images/_hunter/_talents/_lev75/<?php classValues($classes['Hunter']['talents']['lev75'], 1); ?>.jpg"></span>
-				<span class="MageSelected"><img src="_images/_mage/_talents/_lev75/<?php classValues($classes['Mage']['talents']['lev75'], 1); ?>.jpg"></span>
-				<span class="MonkSelected"><img src="_images/_monk/_talents/_lev75/<?php classValues($classes['Monk']['talents']['lev75'], 1); ?>.jpg"></span>
-				<span class="PaladinSelected"><img src="_images/_paladin/_talents/_lev75/<?php classValues($classes['Paladin']['talents']['lev75'], 1); ?>.jpg"></span>
-				<span class="PriestSelected"><img src="_images/_priest/_talents/_lev75/<?php classValues($classes['Priest']['talents']['lev75'], 1); ?>.jpg"></span>
-				<span class="RogueSelected"><img src="_images/_rogue/_talents/_lev75/<?php classValues($classes['Rogue']['talents']['lev75'], 1); ?>.jpg"></span>
-				<span class="ShamanSelected"><img src="_images/_shaman/_talents/_lev75/<?php classValues($classes['Shaman']['talents']['lev75'], 1); ?>.jpg"></span>
-				<span class="WarlockSelected"><img src="_images/_warlock/_talents/_lev75/<?php classValues($classes['Warlock']['talents']['lev75'], 1); ?>.jpg"></span>
-				<span class="WarriorSelected"><img src="_images/_warrior/_talents/_lev75/<?php classValues($classes['Warrior']['talents']['lev75'], 1); ?>.jpg"></span>
+				<span class="DeathKnightSelected"><img src="images/_deathknight/_talents/_lev75/<?php classValues($classes['Death Knight']['talents']['lev75'], 1); ?>.jpg"></span>
+				<span class="DruidSelected"><img src="images/_druid/_talents/_lev75/<?php classValues($classes['Druid']['talents']['lev75'], 1); ?>.jpg"></span>
+				<span class="HunterSelected"><img src="images/_hunter/_talents/_lev75/<?php classValues($classes['Hunter']['talents']['lev75'], 1); ?>.jpg"></span>
+				<span class="MageSelected"><img src="images/_mage/_talents/_lev75/<?php classValues($classes['Mage']['talents']['lev75'], 1); ?>.jpg"></span>
+				<span class="MonkSelected"><img src="images/_monk/_talents/_lev75/<?php classValues($classes['Monk']['talents']['lev75'], 1); ?>.jpg"></span>
+				<span class="PaladinSelected"><img src="images/_paladin/_talents/_lev75/<?php classValues($classes['Paladin']['talents']['lev75'], 1); ?>.jpg"></span>
+				<span class="PriestSelected"><img src="images/_priest/_talents/_lev75/<?php classValues($classes['Priest']['talents']['lev75'], 1); ?>.jpg"></span>
+				<span class="RogueSelected"><img src="images/_rogue/_talents/_lev75/<?php classValues($classes['Rogue']['talents']['lev75'], 1); ?>.jpg"></span>
+				<span class="ShamanSelected"><img src="images/_shaman/_talents/_lev75/<?php classValues($classes['Shaman']['talents']['lev75'], 1); ?>.jpg"></span>
+				<span class="WarlockSelected"><img src="images/_warlock/_talents/_lev75/<?php classValues($classes['Warlock']['talents']['lev75'], 1); ?>.jpg"></span>
+				<span class="WarriorSelected"><img src="images/_warrior/_talents/_lev75/<?php classValues($classes['Warrior']['talents']['lev75'], 1); ?>.jpg"></span>
 			</div>
 			
 			<div class="talentText">
@@ -734,17 +730,17 @@ require('_includes/header.php');
 		<div id="lev75Talent3" class="specTalent">
 			
 			<div class="talentIcon">
-				<span class="DeathKnightSelected"><img src="_images/_deathknight/_talents/_lev75/<?php classValues($classes['Death Knight']['talents']['lev75'], 2); ?>.jpg"></span>
-				<span class="DruidSelected"><img src="_images/_druid/_talents/_lev75/<?php classValues($classes['Druid']['talents']['lev75'], 2); ?>.jpg"></span>
-				<span class="HunterSelected"><img src="_images/_hunter/_talents/_lev75/<?php classValues($classes['Hunter']['talents']['lev75'], 2); ?>.jpg"></span>
-				<span class="MageSelected"><img src="_images/_mage/_talents/_lev75/<?php classValues($classes['Mage']['talents']['lev75'], 2); ?>.jpg"></span>
-				<span class="MonkSelected"><img src="_images/_monk/_talents/_lev75/<?php classValues($classes['Monk']['talents']['lev75'], 2); ?>.jpg"></span>
-				<span class="PaladinSelected"><img src="_images/_paladin/_talents/_lev75/<?php classValues($classes['Paladin']['talents']['lev75'], 2); ?>.jpg"></span>
-				<span class="PriestSelected"><img src="_images/_priest/_talents/_lev75/<?php classValues($classes['Priest']['talents']['lev75'], 2); ?>.jpg"></span>
-				<span class="RogueSelected"><img src="_images/_rogue/_talents/_lev75/<?php classValues($classes['Rogue']['talents']['lev75'], 2); ?>.jpg"></span>
-				<span class="ShamanSelected"><img src="_images/_shaman/_talents/_lev75/<?php classValues($classes['Shaman']['talents']['lev75'], 2); ?>.jpg"></span>
-				<span class="WarlockSelected"><img src="_images/_warlock/_talents/_lev75/<?php classValues($classes['Warlock']['talents']['lev75'], 2); ?>.jpg"></span>
-				<span class="WarriorSelected"><img src="_images/_warrior/_talents/_lev75/<?php classValues($classes['Warrior']['talents']['lev75'], 2); ?>.jpg"></span>
+				<span class="DeathKnightSelected"><img src="images/_deathknight/_talents/_lev75/<?php classValues($classes['Death Knight']['talents']['lev75'], 2); ?>.jpg"></span>
+				<span class="DruidSelected"><img src="images/_druid/_talents/_lev75/<?php classValues($classes['Druid']['talents']['lev75'], 2); ?>.jpg"></span>
+				<span class="HunterSelected"><img src="images/_hunter/_talents/_lev75/<?php classValues($classes['Hunter']['talents']['lev75'], 2); ?>.jpg"></span>
+				<span class="MageSelected"><img src="images/_mage/_talents/_lev75/<?php classValues($classes['Mage']['talents']['lev75'], 2); ?>.jpg"></span>
+				<span class="MonkSelected"><img src="images/_monk/_talents/_lev75/<?php classValues($classes['Monk']['talents']['lev75'], 2); ?>.jpg"></span>
+				<span class="PaladinSelected"><img src="images/_paladin/_talents/_lev75/<?php classValues($classes['Paladin']['talents']['lev75'], 2); ?>.jpg"></span>
+				<span class="PriestSelected"><img src="images/_priest/_talents/_lev75/<?php classValues($classes['Priest']['talents']['lev75'], 2); ?>.jpg"></span>
+				<span class="RogueSelected"><img src="images/_rogue/_talents/_lev75/<?php classValues($classes['Rogue']['talents']['lev75'], 2); ?>.jpg"></span>
+				<span class="ShamanSelected"><img src="images/_shaman/_talents/_lev75/<?php classValues($classes['Shaman']['talents']['lev75'], 2); ?>.jpg"></span>
+				<span class="WarlockSelected"><img src="images/_warlock/_talents/_lev75/<?php classValues($classes['Warlock']['talents']['lev75'], 2); ?>.jpg"></span>
+				<span class="WarriorSelected"><img src="images/_warrior/_talents/_lev75/<?php classValues($classes['Warrior']['talents']['lev75'], 2); ?>.jpg"></span>
 			</div>
 			
 			<div class="talentText">
@@ -776,17 +772,17 @@ require('_includes/header.php');
 		<div id="lev90Talent1" class="specTalent">
 			
 			<div class="talentIcon">
-				<span class="DeathKnightSelected"><img src="_images/_deathknight/_talents/_lev90/<?php classValues($classes['Death Knight']['talents']['lev90'], 0); ?>.jpg"></span>
-				<span class="DruidSelected"><img src="_images/_druid/_talents/_lev90/<?php classValues($classes['Druid']['talents']['lev90'], 0); ?>.jpg"></span>
-				<span class="HunterSelected"><img src="_images/_hunter/_talents/_lev90/<?php classValues($classes['Hunter']['talents']['lev90'], 0); ?>.jpg"></span>
-				<span class="MageSelected"><img src="_images/_mage/_talents/_lev90/<?php classValues($classes['Mage']['talents']['lev90'], 0); ?>.jpg"></span>
-				<span class="MonkSelected"><img src="_images/_monk/_talents/_lev90/<?php classValues($classes['Monk']['talents']['lev90'], 0); ?>.jpg"></span>
-				<span class="PaladinSelected"><img src="_images/_paladin/_talents/_lev90/<?php classValues($classes['Paladin']['talents']['lev90'], 0); ?>.jpg"></span>
-				<span class="PriestSelected"><img src="_images/_priest/_talents/_lev90/<?php classValues($classes['Priest']['talents']['lev90'], 0); ?>.jpg"></span>
-				<span class="RogueSelected"><img src="_images/_rogue/_talents/_lev90/<?php classValues($classes['Rogue']['talents']['lev90'], 0); ?>.jpg"></span>
-				<span class="ShamanSelected"><img src="_images/_shaman/_talents/_lev90/<?php classValues($classes['Shaman']['talents']['lev90'], 0); ?>.jpg"></span>
-				<span class="WarlockSelected"><img src="_images/_warlock/_talents/_lev90/<?php classValues($classes['Warlock']['talents']['lev90'], 0); ?>.jpg"></span>
-				<span class="WarriorSelected"><img src="_images/_warrior/_talents/_lev90/<?php classValues($classes['Warrior']['talents']['lev90'], 0); ?>.jpg"></span>
+				<span class="DeathKnightSelected"><img src="images/_deathknight/_talents/_lev90/<?php classValues($classes['Death Knight']['talents']['lev90'], 0); ?>.jpg"></span>
+				<span class="DruidSelected"><img src="images/_druid/_talents/_lev90/<?php classValues($classes['Druid']['talents']['lev90'], 0); ?>.jpg"></span>
+				<span class="HunterSelected"><img src="images/_hunter/_talents/_lev90/<?php classValues($classes['Hunter']['talents']['lev90'], 0); ?>.jpg"></span>
+				<span class="MageSelected"><img src="images/_mage/_talents/_lev90/<?php classValues($classes['Mage']['talents']['lev90'], 0); ?>.jpg"></span>
+				<span class="MonkSelected"><img src="images/_monk/_talents/_lev90/<?php classValues($classes['Monk']['talents']['lev90'], 0); ?>.jpg"></span>
+				<span class="PaladinSelected"><img src="images/_paladin/_talents/_lev90/<?php classValues($classes['Paladin']['talents']['lev90'], 0); ?>.jpg"></span>
+				<span class="PriestSelected"><img src="images/_priest/_talents/_lev90/<?php classValues($classes['Priest']['talents']['lev90'], 0); ?>.jpg"></span>
+				<span class="RogueSelected"><img src="images/_rogue/_talents/_lev90/<?php classValues($classes['Rogue']['talents']['lev90'], 0); ?>.jpg"></span>
+				<span class="ShamanSelected"><img src="images/_shaman/_talents/_lev90/<?php classValues($classes['Shaman']['talents']['lev90'], 0); ?>.jpg"></span>
+				<span class="WarlockSelected"><img src="images/_warlock/_talents/_lev90/<?php classValues($classes['Warlock']['talents']['lev90'], 0); ?>.jpg"></span>
+				<span class="WarriorSelected"><img src="images/_warrior/_talents/_lev90/<?php classValues($classes['Warrior']['talents']['lev90'], 0); ?>.jpg"></span>
 			</div>
 			
 			<div class="talentText">
@@ -810,17 +806,17 @@ require('_includes/header.php');
 		<div id="lev90Talent2" class="specTalent">
 			
 			<div class="talentIcon">
-				<span class="DeathKnightSelected"><img src="_images/_deathknight/_talents/_lev90/<?php classValues($classes['Death Knight']['talents']['lev90'], 1); ?>.jpg"></span>
-				<span class="DruidSelected"><img src="_images/_druid/_talents/_lev90/<?php classValues($classes['Druid']['talents']['lev90'], 1); ?>.jpg"></span>
-				<span class="HunterSelected"><img src="_images/_hunter/_talents/_lev90/<?php classValues($classes['Hunter']['talents']['lev90'], 1); ?>.jpg"></span>
-				<span class="MageSelected"><img src="_images/_mage/_talents/_lev90/<?php classValues($classes['Mage']['talents']['lev90'], 1); ?>.jpg"></span>
-				<span class="MonkSelected"><img src="_images/_monk/_talents/_lev90/<?php classValues($classes['Monk']['talents']['lev90'], 1); ?>.jpg"></span>
-				<span class="PaladinSelected"><img src="_images/_paladin/_talents/_lev90/<?php classValues($classes['Paladin']['talents']['lev90'], 1); ?>.jpg"></span>
-				<span class="PriestSelected"><img src="_images/_priest/_talents/_lev90/<?php classValues($classes['Priest']['talents']['lev90'], 1); ?>.jpg"></span>
-				<span class="RogueSelected"><img src="_images/_rogue/_talents/_lev90/<?php classValues($classes['Rogue']['talents']['lev90'], 1); ?>.jpg"></span>
-				<span class="ShamanSelected"><img src="_images/_shaman/_talents/_lev90/<?php classValues($classes['Shaman']['talents']['lev90'], 1); ?>.jpg"></span>
-				<span class="WarlockSelected"><img src="_images/_warlock/_talents/_lev90/<?php classValues($classes['Warlock']['talents']['lev90'], 1); ?>.jpg"></span>
-				<span class="WarriorSelected"><img src="_images/_warrior/_talents/_lev90/<?php classValues($classes['Warrior']['talents']['lev90'], 1); ?>.jpg"></span>
+				<span class="DeathKnightSelected"><img src="images/_deathknight/_talents/_lev90/<?php classValues($classes['Death Knight']['talents']['lev90'], 1); ?>.jpg"></span>
+				<span class="DruidSelected"><img src="images/_druid/_talents/_lev90/<?php classValues($classes['Druid']['talents']['lev90'], 1); ?>.jpg"></span>
+				<span class="HunterSelected"><img src="images/_hunter/_talents/_lev90/<?php classValues($classes['Hunter']['talents']['lev90'], 1); ?>.jpg"></span>
+				<span class="MageSelected"><img src="images/_mage/_talents/_lev90/<?php classValues($classes['Mage']['talents']['lev90'], 1); ?>.jpg"></span>
+				<span class="MonkSelected"><img src="images/_monk/_talents/_lev90/<?php classValues($classes['Monk']['talents']['lev90'], 1); ?>.jpg"></span>
+				<span class="PaladinSelected"><img src="images/_paladin/_talents/_lev90/<?php classValues($classes['Paladin']['talents']['lev90'], 1); ?>.jpg"></span>
+				<span class="PriestSelected"><img src="images/_priest/_talents/_lev90/<?php classValues($classes['Priest']['talents']['lev90'], 1); ?>.jpg"></span>
+				<span class="RogueSelected"><img src="images/_rogue/_talents/_lev90/<?php classValues($classes['Rogue']['talents']['lev90'], 1); ?>.jpg"></span>
+				<span class="ShamanSelected"><img src="images/_shaman/_talents/_lev90/<?php classValues($classes['Shaman']['talents']['lev90'], 1); ?>.jpg"></span>
+				<span class="WarlockSelected"><img src="images/_warlock/_talents/_lev90/<?php classValues($classes['Warlock']['talents']['lev90'], 1); ?>.jpg"></span>
+				<span class="WarriorSelected"><img src="images/_warrior/_talents/_lev90/<?php classValues($classes['Warrior']['talents']['lev90'], 1); ?>.jpg"></span>
 			</div>
 			
 			<div class="talentText">
@@ -844,17 +840,17 @@ require('_includes/header.php');
 		<div id="lev90Talent3" class="specTalent">
 			
 			<div class="talentIcon">
-				<span class="DeathKnightSelected"><img src="_images/_deathknight/_talents/_lev90/<?php classValues($classes['Death Knight']['talents']['lev90'], 2); ?>.jpg"></span>
-				<span class="DruidSelected"><img src="_images/_druid/_talents/_lev90/<?php classValues($classes['Druid']['talents']['lev90'], 2); ?>.jpg"></span>
-				<span class="HunterSelected"><img src="_images/_hunter/_talents/_lev90/<?php classValues($classes['Hunter']['talents']['lev90'], 2); ?>.jpg"></span>
-				<span class="MageSelected"><img src="_images/_mage/_talents/_lev90/<?php classValues($classes['Mage']['talents']['lev90'], 2); ?>.jpg"></span>
-				<span class="MonkSelected"><img src="_images/_monk/_talents/_lev90/<?php classValues($classes['Monk']['talents']['lev90'], 2); ?>.jpg"></span>
-				<span class="PaladinSelected"><img src="_images/_paladin/_talents/_lev90/<?php classValues($classes['Paladin']['talents']['lev90'], 2); ?>.jpg"></span>
-				<span class="PriestSelected"><img src="_images/_priest/_talents/_lev90/<?php classValues($classes['Priest']['talents']['lev90'], 2); ?>.jpg"></span>
-				<span class="RogueSelected"><img src="_images/_rogue/_talents/_lev90/<?php classValues($classes['Rogue']['talents']['lev90'], 2); ?>.jpg"></span>
-				<span class="ShamanSelected"><img src="_images/_shaman/_talents/_lev90/<?php classValues($classes['Shaman']['talents']['lev90'], 2); ?>.jpg"></span>
-				<span class="WarlockSelected"><img src="_images/_warlock/_talents/_lev90/<?php classValues($classes['Warlock']['talents']['lev90'], 2); ?>.jpg"></span>
-				<span class="WarriorSelected"><img src="_images/_warrior/_talents/_lev90/<?php classValues($classes['Warrior']['talents']['lev90'], 2); ?>.jpg"></span>
+				<span class="DeathKnightSelected"><img src="images/_deathknight/_talents/_lev90/<?php classValues($classes['Death Knight']['talents']['lev90'], 2); ?>.jpg"></span>
+				<span class="DruidSelected"><img src="images/_druid/_talents/_lev90/<?php classValues($classes['Druid']['talents']['lev90'], 2); ?>.jpg"></span>
+				<span class="HunterSelected"><img src="images/_hunter/_talents/_lev90/<?php classValues($classes['Hunter']['talents']['lev90'], 2); ?>.jpg"></span>
+				<span class="MageSelected"><img src="images/_mage/_talents/_lev90/<?php classValues($classes['Mage']['talents']['lev90'], 2); ?>.jpg"></span>
+				<span class="MonkSelected"><img src="images/_monk/_talents/_lev90/<?php classValues($classes['Monk']['talents']['lev90'], 2); ?>.jpg"></span>
+				<span class="PaladinSelected"><img src="images/_paladin/_talents/_lev90/<?php classValues($classes['Paladin']['talents']['lev90'], 2); ?>.jpg"></span>
+				<span class="PriestSelected"><img src="images/_priest/_talents/_lev90/<?php classValues($classes['Priest']['talents']['lev90'], 2); ?>.jpg"></span>
+				<span class="RogueSelected"><img src="images/_rogue/_talents/_lev90/<?php classValues($classes['Rogue']['talents']['lev90'], 2); ?>.jpg"></span>
+				<span class="ShamanSelected"><img src="images/_shaman/_talents/_lev90/<?php classValues($classes['Shaman']['talents']['lev90'], 2); ?>.jpg"></span>
+				<span class="WarlockSelected"><img src="images/_warlock/_talents/_lev90/<?php classValues($classes['Warlock']['talents']['lev90'], 2); ?>.jpg"></span>
+				<span class="WarriorSelected"><img src="images/_warrior/_talents/_lev90/<?php classValues($classes['Warrior']['talents']['lev90'], 2); ?>.jpg"></span>
 			</div>
 			
 			<div class="talentText">
@@ -894,5 +890,5 @@ require('_includes/header.php');
 </form>
 
 <?php
-require('_includes/footer.php');
+require('includes/footer.php');
 ?>

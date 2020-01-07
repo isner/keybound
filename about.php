@@ -1,16 +1,12 @@
 <?php
-require_once('_includes/session.php');
-// require_once('_includes/connection.php');
-require_once('_includes/functions.php');
-require_once('_includes/classTalents.php');
-// gatekeeper(); // If SESSION['userId'] is unset, redirect to login
-
-
+session_start();
+require_once('includes/functions.php');
+require_once('includes/classTalents.php');
 
 //=================================================
 //               BEGIN CLIENT SIDE
 //=================================================
-require('_includes/header.php');
+require('includes/header.php');
 ?>
 
 <div id="welcomeText"></div>
@@ -22,5 +18,5 @@ require('_includes/header.php');
 <p class="clear"></p>
 
 <?php
-require('_includes/footer.php');
+require('includes/footer.php');
 ?>
