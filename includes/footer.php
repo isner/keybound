@@ -12,9 +12,4 @@
 <script src="scripts/index.js"></script>
 
 </body>
-<?php if (strstr($_SERVER['SERVER_NAME'], 'localhost')) { ?>
-	<pre>
-		<?php print_r($GLOBALS); ?>
-	</pre>
-<?php } ?>
 </html>

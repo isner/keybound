@@ -20,10 +20,6 @@
 //				displaySubtext
 // -----------------------------
 
-// Death Knight ids: aa - bw
-
-echo $_POST['name'];
-
 $deathknightAbilities_ids = array(
 	'imageFolder' => 'deathknight',
 	'aa' => 'Blood Strike',

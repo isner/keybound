@@ -214,20 +214,6 @@ $(document).ready(function() {
 		start: function(event, ui) {
 			$(this).css('opacity', '1');
 			var src = $(this).parent();
-			
-			//----------------------------------------------
-			// Update "theHash" - stores hash url parameter
-			//----------------------------------------------
-			var keycode = $(this).parents('div.keyContainer').attr('id');
-			// Find the id of the receiving keyContainer
-			$('div#theHash span[id='+ keycode +'-hash]').text('0000.');
-			// Set the hash value of this keyContainer to "0000."
-			
-			var newHash = ''; // (Re)initilize the hash string
-			$('div#theHash span[id$=-hash]').each(function() { newHash += $(this).text(); });
-			document.location.hash = newHash;
-			// Print the updated hash
-				
 		},
 		stop: function(event, ui) {
 			$(this).css('z-index', '500');
@@ -260,35 +246,10 @@ $(document).ready(function() {
 						}
 						
 					});
-				
 				}
-				
-				//------------------------------------------------
-				// Update "theHash" - stores post-hash url string
-				//------------------------------------------------
-				// var keycode = $(this).parents('div.keyContainer').attr('id');
-				// // Find the id of the receiving keyContainer
-				// $('div#theHash span[id='+ keycode +'-hash]').text('.');
-				// // Set the hash value of this keyContainer to "."
-				
-				// var newHash = ''; // (Re)initilize the hash string
-				// $('div#theHash span[id$=-hash]').each(function() { newHash += $(this).text(); });
-				// document.location.hash = newHash;
-				// // Print the updated hash
-				
-				//-----------------
-				// Remove the icon
-				//-----------------
-				$(this).remove();
-				// Remove draggableIcon from the DOM
-				
 			}
-		
 		}
-	
 	}
-	
-	
 	
 	//----------------------------------------	
 	// Set behavior for "droppableContainer"s
@@ -364,20 +325,6 @@ $(document).ready(function() {
 					.parents('div.draggableAbility').remove();
 			
 			}
-			
-			//------------------------------------------------
-			// Update "theHash" - stores post-hash url string
-			//------------------------------------------------
-			var keycode = $(this).attr('id');
-			var spellKId = $(dragged).find('a').attr('class');
-			console.log(spellKId + ' dropped on ' + keycode);
-			$('div#theHash span[id=' + keycode + '-hash]').text(spellKId + '.');
-			
-			var newHash = ''; // (Re)initilize the hash string
-			$('div#theHash span[id$=-hash]').each(function() { newHash += $(this).text(); });
-			document.location.hash = newHash;
-			// Print the updated hash
-			
 		}
 	});
 	
@@ -561,63 +508,6 @@ $(document).ready(function() {
 		$(this).animate({ borderColor: '#000' }, 50);
 	});
 	
-	//---------------------------------------------------------
-	//	Load keybinding configuration from URL's hash property
-	//---------------------------------------------------------
-	
-	var hashPosition = url.indexOf('#');
-	// Determine location of hash tag in the current URL
-	
-	if (hashPosition >= 0) {
-	// If the current URL contains a hash property
-	
-		currentHash = url.slice(hashPosition + 1);
-		// Isolate hash string
-		
-		hashCode_array = splitInto(currentHash, 2); // Function defined below
-		// hashCode_array = currentHash.split('.');
-		// Split hash codes into an array
-		
-		var i = 0;
-		
-		$(hashCode_array).each(function(index, value) {
-		// For each 4-digit code
-		
-			if (hashCode_array[i] != '00' && hashCode_array[i] != '') {
-			// This code position IS NOT blank
-			
-				console.log('Found icon ' + hashCode_array[i] + ' at key ' + keyContainer_array[i]);
-			
-				var name = selectedClass_abilityCodeArray[hashCode_array[i]];
-				console.log('Spell name: ' + name);
-
-				var toRemove = 'Abilities_ids';
-
-				var src = 'deathknight' + '/' + toLowerCase(selectedClass_abilityCodeArray[hashCode_array[i]].replace(' ',''));
-		
-				var importedIcon = '<div class="draggableAbility ui-draggable roaming" style="left: 0px; top: 0px; height: 30px; width: 30px; border: 1px solid rgb(122, 122, 122); opacity: 1; position: relative;"><a rel name="'+name+'" class="'+hashCode_array[i]+'"><img src="images/_'+src+'.jpg"></a></div>';
-				// Create HTML for placement in keyContainer
-			
-				$('div[id='+ keyContainer_array[i] +'] div[class^=iconHolder]').append(importedIcon);
-				// Add icon to the appropriate keyContainer
-			
-				$('span[id='+ keyContainer_array[i] +'-hash]').text(value+'.');
-				// Update the text value of the appropriate span in #theHash
-			
-			} else {
-			// This hashCode position IS blank
-			
-				$('span[id='+ keyContainer_array[i] +'-hash]').text('0000.');
-				// This span's hashCode is '0000'
-			
-			}
-			
-			i++;
-		
-		});
-	
-	}
-	
 }); /* END document ready */
 
 /*#################
@@ -730,56 +620,6 @@ function enableSelectLists() {
 	});
 	
 }
-
-// --------------------------------------------
-// Define Select List function - DEFAULT STATE
-// --------------------------------------------
-
-// function enableSelectLists() {
-
-	// $('div.selectBox').each(function() {
-	
-		// // Set 'selected' text to text of first option
-		// $(this).children('span.selected').html(
-			// $(this).children('div.selectOptions').children('span.selectOption:first').html()
-		// );
-		
-		// // Set 'selected' value to value of first option
-		// $(this).attr(
-			// 'value', $(this).children('div.selectOptions').children('span.selectOption:first').attr('value')
-		// );
-		
-			// $(this).children('span.selected, span.selectArrow').click(function() {
-			
-				// if ($(this).siblings('div.selectOptions').css('display') == 'none') {
-				
-					// $(this).siblings('div.selectOptions').css('display', 'block');
-					
-				// } else {
-				
-					// $(this).siblings('div.selectOptions').css('display', 'none');
-					
-				// }
-				
-			// });
-			
-		// $(this).find('span.selectOption').click(function() {
-		
-			// $(this).parent('div.selectOptions').css('display', 'none');
-			
-			// $(this).closest('div.selectBox').attr(
-				// 'value', $(this).attr('value')
-			// );
-			
-			// $(this).parent().siblings('span.selected').html(
-				// $(this).html()
-			// );
-			
-		// });
-		
-	// });
-	
-// }
 
 // ---------------------------------
 //	"Specialization & Talents" Pane
