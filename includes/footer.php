@@ -4,7 +4,7 @@
 <div id="bottom_bg">
 	<div id="bottom">
 		<div id="copyStatement">
-			<span>2012 &copy; Matthew Isner | Icon artwork &copy; Blizzard Entertainment</span>
+			<span>Made by Matt Isner 2012 | Icon artwork &copy; Blizzard Entertainment</span>
 		</div>
 	</div>
 </div>
