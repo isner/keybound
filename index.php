@@ -28,7 +28,7 @@ require('includes/header.php');
 
 <form method="post" action="bind.php">
 
-<div class="spacer"></div>
+<div class="spacer">For nostalgia purposes only - content is out of date and inaccessible</div>
 
 <div id="classSelectionText" class="centeredHeader classSelection">Select Your Class</div>
 
