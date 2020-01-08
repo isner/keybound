@@ -808,7 +808,7 @@ function beginHere() {
 function helper_dragMe() {
 
 	$('div#helper_dragMe').click(function() { $(this).hide(); });
-	$('div#helper_dragMe').show(800).delay(3000).hide(800);
+	$('div#helper_dragMe').show(800).delay(5000).hide(800);
 	
 
 }
