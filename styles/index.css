@@ -1,9 +1,3 @@
-/*-----------------------------------
-	default.css
-	Stylesheet for Keybound project
-	by Matthew S. Isner
------------------------------------*/
-
 /*
 	6F672F - brown gold
 	ecc40d - bright gold
@@ -546,7 +540,6 @@ div.selectOptions {
 }
 
 span.selectOption {
-	/*display: block;*/
 	display: none;
 	width: 80%;
 	line-height: 20px;
@@ -599,7 +592,6 @@ span.selectOption:hover {
 	float: left;
 	height: 50px;
 	width: 9%;
-	display: inline-block;
 	line-height: 53px;
 	vertical-align: middle;
 	border: 1px solid #3f3f3f;
@@ -626,7 +618,6 @@ span.selectOption:hover {
 	float: left;
 	height: 100%;
 	width: 30%;
-	display: inline-block;
 	font-size: 15px;
 	vertical-align: middle;
 	border: 1px solid #3f3f3f;
@@ -700,7 +691,6 @@ div#spellbookWrapper {
 	margin: 0 auto;
 	margin-bottom: 10px;
 	width: 100%;
-	/*border-bottom: 1px dashed #6F672F;*/
 }
 
 div#spellbook {
@@ -745,10 +735,6 @@ div#spellbook {
 .spellRow a {
 	color: #ecc40d;
 	text-decoration: none;
-}
-
-.spellRow a:hover {
-	
 }
 
 .bgGrad {	
@@ -927,10 +913,6 @@ div.draggableAbility:hover {
 	cursor: pointer;
 }
 
-.dim {
-	
-}
-
 /*-----------------------------------
 	Keyboard
 -----------------------------------*/
@@ -980,7 +962,6 @@ div#keyboardContainer {
 
 div.keyContainer {
 	float: left;
-	display: inline-block;
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
 	border-radius: 2px;
@@ -1015,9 +996,6 @@ div.keyContainer {
 }
 
 div.keyContainer-hover {
-	/*-webkit-box-shadow: 0px 0px 1px 1px #ceb542;
-	box-shadow: 0px 0px 1px 1px #ceb542;
-	border-color: #ceb542;*/
 	background: #6F672F;
 }
 
@@ -1039,14 +1017,6 @@ div.fKey {
 div.squareKey {
 	height: 53px;
 	width: 53px;
-}
-
-div.droppableContainer {
-	/*border: 1px solid #ccc;*/
-}
-
-div.droppableContainerFilled {
-	
 }
 
 .iconHolder, .iconHolder-fKey, .iconHolder-space {
